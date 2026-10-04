@@ -1,16 +1,16 @@
 {
-  "updated_at": "2026-10-04T23:44:39.771Z",
+  "updated_at": "2026-10-04T23:55:12.451Z",
   "mode": "shadow",
   "seats": [
     {
       "name": "SCAN",
-      "status": "warn",
-      "note": "DexScreener rate-limited (1015) at 18:25 CT; standing down"
+      "status": "ok",
+      "note": "61 names, 44 FOMO rows"
     },
     {
       "name": "VET",
       "status": "warn",
-      "note": "1/1 judged with top-wallet/top-10 unknown (RPC/GT rate-limited); size capped 0.3"
+      "note": "6/6 judged with top-wallet/top-10 unknown (RPC/GT rate-limited); size capped 0.3"
     },
     {
       "name": "SOCIAL",
@@ -19,8 +19,8 @@
     },
     {
       "name": "CHIEF",
-      "status": "idle",
-      "note": "No pick to make this cycle"
+      "status": "ok",
+      "note": "Pick declined: worth_trading_at_all 0.42 < 0.60"
     },
     {
       "name": "SIZE",
@@ -29,26 +29,26 @@
     },
     {
       "name": "FILLS",
-      "status": "warn",
-      "note": "Last price mark failed (DexScreener rate limit); using previous mark"
+      "status": "ok",
+      "note": "1 paper fill(s) recorded, marks current"
     },
     {
       "name": "RISK",
       "status": "ok",
-      "note": "1 open, exit rule hold; unrealized $+15.98"
+      "note": "1 open, exit rule hold; unrealized $+1.21"
     },
     {
       "name": "COORDINATOR",
-      "status": "idle",
-      "note": "Loop stopped; last cycle 20 min ago"
+      "status": "ok",
+      "note": "Cycles running; last at 18:55 CT"
     }
   ],
   "last_cycle": {
-    "at": "2026-10-04T23:25:01.368Z",
-    "outcome": "aborted",
-    "universe": 0,
-    "survivors": 0,
-    "reason": "DexScreener rate-limited this box (Cloudflare 1015); cycle stood down, nothing benched."
+    "at": "2026-10-04T23:55:12.147Z",
+    "outcome": "no_trade",
+    "universe": 61,
+    "survivors": 2,
+    "reason": "Pick declined: worth_trading_at_all 0.42 < 0.60 (best zDOG at 0.20)."
   },
   "positions": [
     {
@@ -56,10 +56,10 @@
       "chain": "solana",
       "address": "GYFLuEAZMDdpUsTmyGdHstuXQC3JB9ZqtZbfktpppump",
       "entry_price": 0.00028340113,
-      "current_price": 0.0004285,
+      "current_price": 0.000309,
       "ticket_usd": 36.0,
-      "pnl_pct": 44.4,
-      "pnl_usd_after_fees": 15.98,
+      "pnl_pct": 3.37,
+      "pnl_usd_after_fees": 1.21,
       "opened_at": "2026-10-04T21:32:00.000Z",
       "status": "open"
     }
@@ -67,7 +67,7 @@
   "totals": {
     "paper_bank_usd": 1000.0,
     "realized_usd": 0.0,
-    "unrealized_usd": 15.98,
+    "unrealized_usd": 1.21,
     "trades": 1,
     "win_rate": null
   }
