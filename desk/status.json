@@ -1,0 +1,74 @@
+{
+  "updated_at": "2026-10-04T23:44:39.771Z",
+  "mode": "shadow",
+  "seats": [
+    {
+      "name": "SCAN",
+      "status": "warn",
+      "note": "DexScreener rate-limited (1015) at 18:25 CT; standing down"
+    },
+    {
+      "name": "VET",
+      "status": "warn",
+      "note": "1/1 judged with top-wallet/top-10 unknown (RPC/GT rate-limited); size capped 0.3"
+    },
+    {
+      "name": "SOCIAL",
+      "status": "idle",
+      "note": "No usable X account on judged tokens"
+    },
+    {
+      "name": "CHIEF",
+      "status": "idle",
+      "note": "No pick to make this cycle"
+    },
+    {
+      "name": "SIZE",
+      "status": "idle",
+      "note": "Waiting on a ticket (bank $1,000, max 6%)"
+    },
+    {
+      "name": "FILLS",
+      "status": "warn",
+      "note": "Last price mark failed (DexScreener rate limit); using previous mark"
+    },
+    {
+      "name": "RISK",
+      "status": "ok",
+      "note": "1 open, exit rule hold; unrealized $+15.98"
+    },
+    {
+      "name": "COORDINATOR",
+      "status": "idle",
+      "note": "Loop stopped; last cycle 20 min ago"
+    }
+  ],
+  "last_cycle": {
+    "at": "2026-10-04T23:25:01.368Z",
+    "outcome": "aborted",
+    "universe": 0,
+    "survivors": 0,
+    "reason": "DexScreener rate-limited this box (Cloudflare 1015); cycle stood down, nothing benched."
+  },
+  "positions": [
+    {
+      "symbol": "SWAP",
+      "chain": "solana",
+      "address": "GYFLuEAZMDdpUsTmyGdHstuXQC3JB9ZqtZbfktpppump",
+      "entry_price": 0.00028340113,
+      "current_price": 0.0004285,
+      "ticket_usd": 36.0,
+      "pnl_pct": 44.4,
+      "pnl_usd_after_fees": 15.98,
+      "opened_at": "2026-10-04T21:32:00.000Z",
+      "status": "open"
+    }
+  ],
+  "totals": {
+    "paper_bank_usd": 1000.0,
+    "realized_usd": 0.0,
+    "unrealized_usd": 15.98,
+    "trades": 1,
+    "win_rate": null
+  }
+}
