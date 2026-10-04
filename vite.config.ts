@@ -114,6 +114,7 @@ const PANEL_CLUSTER: Record<string, PanelChunkName> = {
   NewsMarketCorrelation: 'panels-markets',
   NqCatalysts: 'panels-markets', NqPulse: 'panels-markets',
   Positioning: 'panels-markets', Stablecoin: 'panels-markets',
+  TradingDesk: 'panels-markets',
   StockAnalysis: 'panels-markets', StockBacktest: 'panels-markets',
   WsbTickerScanner: 'panels-markets', YieldCurve: 'panels-markets',
   // Energy / commodities / supply infra

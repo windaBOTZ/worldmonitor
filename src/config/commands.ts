@@ -198,6 +198,7 @@ export const COMMANDS: Command[] = [
   // with nothing to tell them apart, so this one owns only the rate- and
   // crisis-specific phrasing — the queries no headline feed can answer.
   { id: 'panel:fx', keywords: ['fx rates', 'spot rates', 'currency stress', 'currency crisis', 'devaluation', 'depreciation', 'fx stress', 'drawdown'], label: 'Panel: FX Rates', icon: '\u{1F4C9}', category: 'panels' },
+  { id: 'panel:trading-desk', keywords: ['trading desk', 'paper trading', 'shadow mode', 'crypto desk', 'ai agents'], label: 'Panel: Trading Desk', icon: '\u{1F4CA}', category: 'panels' },
   { id: 'panel:fuel-prices', keywords: ['fuel prices', 'gas prices', 'gasoline', 'diesel', 'petrol', 'fuel cost', 'pump prices'], label: 'Panel: Fuel Prices', icon: '\u26FD', category: 'panels' },
   { id: 'panel:fao-food-price-index', keywords: ['fao', 'food price index', 'ffpi', 'food prices', 'cereals', 'fao food', 'global food prices', 'food inflation'], label: 'Panel: FAO Food Price Index', icon: '\u{1F33E}', category: 'panels' },
   { id: 'panel:national-debt', keywords: ['national debt', 'debt clock', 'government debt', 'deficit'], label: 'Panel: National Debt Clock', icon: '\u{1F4B8}', category: 'panels' },
