@@ -1,16 +1,16 @@
 {
-  "updated_at": "2026-10-05T23:44:18.458Z",
+  "updated_at": "2026-10-05T23:49:36.360Z",
   "mode": "shadow",
   "seats": [
     {
       "name": "SCAN",
-      "status": "warn",
-      "note": "DexScreener rate-limited (1015) at 18:44 CT; standing down"
+      "status": "ok",
+      "note": "63 names, 45 FOMO rows"
     },
     {
       "name": "VET",
       "status": "warn",
-      "note": "2/2 judged with top-wallet/top-10 unknown (RPC/GT rate-limited); size capped 0.3"
+      "note": "1/1 judged with top-wallet/top-10 unknown (RPC/GT rate-limited); size capped 0.3"
     },
     {
       "name": "SOCIAL",
@@ -19,8 +19,8 @@
     },
     {
       "name": "CHIEF",
-      "status": "idle",
-      "note": "No pick to make this cycle"
+      "status": "ok",
+      "note": "Single survivor declined: worth_trading_at_all below 0.60."
     },
     {
       "name": "SIZE",
@@ -29,26 +29,26 @@
     },
     {
       "name": "FILLS",
-      "status": "warn",
-      "note": "Last price mark failed (DexScreener rate limit); using previous mark"
+      "status": "ok",
+      "note": "1 paper fill(s) recorded, marks current"
     },
     {
       "name": "RISK",
       "status": "ok",
-      "note": "1 open, exit rule hold; unrealized $+28.57"
+      "note": "1 open, exit rule hold; unrealized $+4.97"
     },
     {
       "name": "COORDINATOR",
-      "status": "warn",
-      "note": "Last cycle aborted (dex_rate_limited)"
+      "status": "ok",
+      "note": "Cycles running; last at 18:49 CT"
     }
   ],
   "last_cycle": {
-    "at": "2026-10-05T23:44:18.144Z",
-    "outcome": "aborted",
-    "universe": 0,
-    "survivors": 0,
-    "reason": "DexScreener rate-limited this box (Cloudflare 1015); cycle stood down, nothing benched."
+    "at": "2026-10-05T23:49:36.027Z",
+    "outcome": "no_trade",
+    "universe": 63,
+    "survivors": 1,
+    "reason": "Single survivor declined: worth_trading_at_all below 0.60."
   },
   "positions": [
     {
@@ -56,18 +56,18 @@
       "chain": "solana",
       "address": "GYFLuEAZMDdpUsTmyGdHstuXQC3JB9ZqtZbfktpppump",
       "entry_price": 0.00028340113,
-      "current_price": 0.0005303,
+      "current_price": 0.0003394,
       "ticket_usd": 36.0,
-      "pnl_pct": 79.36,
-      "pnl_usd_after_fees": 28.57,
+      "pnl_pct": 13.81,
+      "pnl_usd_after_fees": 4.97,
       "opened_at": "2026-10-04T21:32:00.000Z",
       "status": "open"
     }
   ],
   "totals": {
-    "paper_bank_usd": 1028.57,
+    "paper_bank_usd": 1004.97,
     "realized_usd": 0.0,
-    "unrealized_usd": 28.57,
+    "unrealized_usd": 4.97,
     "trades": 1,
     "win_rate": null
   },
@@ -185,9 +185,41 @@
     {
       "at": "2026-10-05T23:39:38.094Z",
       "bank_usd": 1028.57
+    },
+    {
+      "at": "2026-10-05T23:49:36.244Z",
+      "bank_usd": 1004.97
     }
   ],
   "activity": [
+    {
+      "at": "2026-10-05T23:49:36.244Z",
+      "seat": "RISK",
+      "kind": "RESEARCH",
+      "text": "Mark SWAP 0.0003394: P&L +13.8%, exit rule hold",
+      "usd": 4.97
+    },
+    {
+      "at": "2026-10-05T23:49:36.027Z",
+      "seat": "CHIEF",
+      "kind": "PASS",
+      "text": "Single survivor declined: worth_trading_at_all below 0.60.",
+      "usd": null
+    },
+    {
+      "at": "2026-10-05T23:49:36.026Z",
+      "seat": "VET",
+      "kind": "RESEARCH",
+      "text": "USEFUL passed all gates",
+      "usd": null
+    },
+    {
+      "at": "2026-10-05T23:49:36.025Z",
+      "seat": "SCAN",
+      "kind": "KILL",
+      "text": "Free cut 20: liquidity 17, mcap 2, age 1",
+      "usd": null
+    },
     {
       "at": "2026-10-05T23:44:18.144Z",
       "seat": "COORDINATOR",
@@ -505,34 +537,6 @@
     },
     {
       "at": "2026-10-05T22:55:03.234Z",
-      "seat": "CHIEF",
-      "kind": "PASS",
-      "text": "Single survivor declined: worth_trading_at_all below 0.60.",
-      "usd": null
-    },
-    {
-      "at": "2026-10-05T22:55:03.234Z",
-      "seat": "VET",
-      "kind": "RESEARCH",
-      "text": "SOUVENIR passed all gates",
-      "usd": null
-    },
-    {
-      "at": "2026-10-05T22:55:03.232Z",
-      "seat": "SCAN",
-      "kind": "KILL",
-      "text": "Free cut 7: liquidity 5, age 2",
-      "usd": null
-    },
-    {
-      "at": "2026-10-05T22:50:05.655Z",
-      "seat": "RISK",
-      "kind": "RESEARCH",
-      "text": "Mark SWAP 0.0005548: P&L +87.8%, exit rule hold",
-      "usd": 31.6
-    },
-    {
-      "at": "2026-10-05T22:50:05.422Z",
       "seat": "CHIEF",
       "kind": "PASS",
       "text": "Single survivor declined: worth_trading_at_all below 0.60.",
