@@ -1,16 +1,16 @@
 {
-  "updated_at": "2026-10-05T22:50:05.774Z",
+  "updated_at": "2026-10-05T22:55:03.602Z",
   "mode": "shadow",
   "seats": [
     {
       "name": "SCAN",
       "status": "ok",
-      "note": "67 names, 53 FOMO rows"
+      "note": "67 names, 52 FOMO rows"
     },
     {
       "name": "VET",
       "status": "warn",
-      "note": "3/3 judged with top-wallet/top-10 unknown (RPC/GT rate-limited); size capped 0.3"
+      "note": "1/1 judged with top-wallet/top-10 unknown (RPC/GT rate-limited); size capped 0.3"
     },
     {
       "name": "SOCIAL",
@@ -35,16 +35,16 @@
     {
       "name": "RISK",
       "status": "ok",
-      "note": "1 open, exit rule hold; unrealized $+31.60"
+      "note": "1 open, exit rule hold; unrealized $+31.56"
     },
     {
       "name": "COORDINATOR",
       "status": "ok",
-      "note": "Cycles running; last at 17:50 CT"
+      "note": "Cycles running; last at 17:55 CT"
     }
   ],
   "last_cycle": {
-    "at": "2026-10-05T22:50:05.422Z",
+    "at": "2026-10-05T22:55:03.234Z",
     "outcome": "no_trade",
     "universe": 67,
     "survivors": 1,
@@ -56,18 +56,18 @@
       "chain": "solana",
       "address": "GYFLuEAZMDdpUsTmyGdHstuXQC3JB9ZqtZbfktpppump",
       "entry_price": 0.00028340113,
-      "current_price": 0.0005548,
+      "current_price": 0.0005545,
       "ticket_usd": 36.0,
-      "pnl_pct": 87.77,
-      "pnl_usd_after_fees": 31.6,
+      "pnl_pct": 87.67,
+      "pnl_usd_after_fees": 31.56,
       "opened_at": "2026-10-04T21:32:00.000Z",
       "status": "open"
     }
   ],
   "totals": {
-    "paper_bank_usd": 1031.6,
+    "paper_bank_usd": 1031.56,
     "realized_usd": 0.0,
-    "unrealized_usd": 31.6,
+    "unrealized_usd": 31.56,
     "trades": 1,
     "win_rate": null
   },
@@ -157,9 +157,41 @@
     {
       "at": "2026-10-05T22:50:05.655Z",
       "bank_usd": 1031.6
+    },
+    {
+      "at": "2026-10-05T22:55:03.475Z",
+      "bank_usd": 1031.56
     }
   ],
   "activity": [
+    {
+      "at": "2026-10-05T22:55:03.475Z",
+      "seat": "RISK",
+      "kind": "RESEARCH",
+      "text": "Mark SWAP 0.0005545: P&L +87.7%, exit rule hold",
+      "usd": 31.56
+    },
+    {
+      "at": "2026-10-05T22:55:03.234Z",
+      "seat": "CHIEF",
+      "kind": "PASS",
+      "text": "Single survivor declined: worth_trading_at_all below 0.60.",
+      "usd": null
+    },
+    {
+      "at": "2026-10-05T22:55:03.234Z",
+      "seat": "VET",
+      "kind": "RESEARCH",
+      "text": "SOUVENIR passed all gates",
+      "usd": null
+    },
+    {
+      "at": "2026-10-05T22:55:03.232Z",
+      "seat": "SCAN",
+      "kind": "KILL",
+      "text": "Free cut 7: liquidity 5, age 2",
+      "usd": null
+    },
     {
       "at": "2026-10-05T22:50:05.655Z",
       "seat": "RISK",
@@ -481,34 +513,6 @@
       "kind": "RESEARCH",
       "text": "Mark SWAP 0.0002669: P&L -11.1%, exit rule hold",
       "usd": -3.99
-    },
-    {
-      "at": "2026-10-05T00:30:01.900Z",
-      "seat": "RISK",
-      "kind": "RESEARCH",
-      "text": "Mark SWAP 0.0002773: P&L -7.5%, exit rule hold",
-      "usd": -2.71
-    },
-    {
-      "at": "2026-10-05T00:30:01.619Z",
-      "seat": "COORDINATOR",
-      "kind": "PASS",
-      "text": "FOMO token expired; cycle stopped.",
-      "usd": null
-    },
-    {
-      "at": "2026-10-05T00:24:57.181Z",
-      "seat": "COORDINATOR",
-      "kind": "PASS",
-      "text": "DexScreener rate-limited this box (Cloudflare 1015); cycle stood down, nothing benched.",
-      "usd": null
-    },
-    {
-      "at": "2026-10-05T00:19:50.279Z",
-      "seat": "COORDINATOR",
-      "kind": "PASS",
-      "text": "DexScreener rate-limited this box (Cloudflare 1015); cycle stood down, nothing benched.",
-      "usd": null
     }
   ]
 }
