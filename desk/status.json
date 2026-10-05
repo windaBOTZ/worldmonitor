@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-05T00:30:02.010Z",
+  "updated_at": "2026-10-05T00:38:18.882Z",
   "mode": "shadow",
   "seats": [
     {
@@ -35,7 +35,7 @@
     {
       "name": "RISK",
       "status": "ok",
-      "note": "1 open, exit rule hold; unrealized $-2.71"
+      "note": "1 open, exit rule hold; unrealized $-3.99"
     },
     {
       "name": "COORDINATOR",
@@ -56,18 +56,18 @@
       "chain": "solana",
       "address": "GYFLuEAZMDdpUsTmyGdHstuXQC3JB9ZqtZbfktpppump",
       "entry_price": 0.00028340113,
-      "current_price": 0.0002773,
+      "current_price": 0.0002669,
       "ticket_usd": 36.0,
-      "pnl_pct": -7.51,
-      "pnl_usd_after_fees": -2.71,
+      "pnl_pct": -11.08,
+      "pnl_usd_after_fees": -3.99,
       "opened_at": "2026-10-04T21:32:00.000Z",
       "status": "open"
     }
   ],
   "totals": {
-    "paper_bank_usd": 997.29,
+    "paper_bank_usd": 996.01,
     "realized_usd": 0.0,
-    "unrealized_usd": -2.71,
+    "unrealized_usd": -3.99,
     "trades": 1,
     "win_rate": null
   },
@@ -125,9 +125,20 @@
     {
       "at": "2026-10-05T00:30:01.900Z",
       "bank_usd": 997.29
+    },
+    {
+      "at": "2026-10-05T00:38:17.649Z",
+      "bank_usd": 996.01
     }
   ],
   "activity": [
+    {
+      "at": "2026-10-05T00:38:17.649Z",
+      "seat": "RISK",
+      "kind": "RESEARCH",
+      "text": "Mark SWAP 0.0002669: P&L -11.1%, exit rule hold",
+      "usd": -3.99
+    },
     {
       "at": "2026-10-05T00:30:01.900Z",
       "seat": "RISK",
@@ -470,13 +481,6 @@
       "kind": "RESEARCH",
       "text": "Mark SWAP 0.0003868: P&L +30.1%, exit rule hold",
       "usd": 10.83
-    },
-    {
-      "at": "2026-10-04T22:50:17.964Z",
-      "seat": "CHIEF",
-      "kind": "PASS",
-      "text": "Pick declined: worth_trading_at_all 0.40 < 0.60 (best HIVE at 0.42).",
-      "usd": null
     }
   ]
 }
