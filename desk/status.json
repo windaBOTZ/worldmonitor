@@ -1,11 +1,11 @@
 {
-  "updated_at": "2026-10-05T00:24:57.428Z",
+  "updated_at": "2026-10-05T00:30:02.010Z",
   "mode": "shadow",
   "seats": [
     {
       "name": "SCAN",
-      "status": "warn",
-      "note": "DexScreener rate-limited (1015) at 19:24 CT; standing down"
+      "status": "error",
+      "note": "FOMO token expired"
     },
     {
       "name": "VET",
@@ -29,26 +29,26 @@
     },
     {
       "name": "FILLS",
-      "status": "warn",
-      "note": "Last price mark failed (DexScreener rate limit); using previous mark"
+      "status": "ok",
+      "note": "1 paper fill(s) recorded, marks current"
     },
     {
       "name": "RISK",
       "status": "ok",
-      "note": "1 open, exit rule hold; unrealized $+3.77"
+      "note": "1 open, exit rule hold; unrealized $-2.71"
     },
     {
       "name": "COORDINATOR",
       "status": "warn",
-      "note": "Last cycle aborted (dex_rate_limited)"
+      "note": "Last cycle aborted (fomo_token_expired)"
     }
   ],
   "last_cycle": {
-    "at": "2026-10-05T00:24:57.181Z",
+    "at": "2026-10-05T00:30:01.619Z",
     "outcome": "aborted",
-    "universe": 72,
+    "universe": 60,
     "survivors": 0,
-    "reason": "DexScreener rate-limited this box (Cloudflare 1015); cycle stood down, nothing benched."
+    "reason": "FOMO token expired; cycle stopped."
   },
   "positions": [
     {
@@ -56,18 +56,18 @@
       "chain": "solana",
       "address": "GYFLuEAZMDdpUsTmyGdHstuXQC3JB9ZqtZbfktpppump",
       "entry_price": 0.00028340113,
-      "current_price": 0.0003297,
+      "current_price": 0.0002773,
       "ticket_usd": 36.0,
-      "pnl_pct": 10.48,
-      "pnl_usd_after_fees": 3.77,
+      "pnl_pct": -7.51,
+      "pnl_usd_after_fees": -2.71,
       "opened_at": "2026-10-04T21:32:00.000Z",
       "status": "open"
     }
   ],
   "totals": {
-    "paper_bank_usd": 1003.77,
+    "paper_bank_usd": 997.29,
     "realized_usd": 0.0,
-    "unrealized_usd": 3.77,
+    "unrealized_usd": -2.71,
     "trades": 1,
     "win_rate": null
   },
@@ -121,9 +121,27 @@
     {
       "at": "2026-10-05T00:10:05.603Z",
       "bank_usd": 1003.77
+    },
+    {
+      "at": "2026-10-05T00:30:01.900Z",
+      "bank_usd": 997.29
     }
   ],
   "activity": [
+    {
+      "at": "2026-10-05T00:30:01.900Z",
+      "seat": "RISK",
+      "kind": "RESEARCH",
+      "text": "Mark SWAP 0.0002773: P&L -7.5%, exit rule hold",
+      "usd": -2.71
+    },
+    {
+      "at": "2026-10-05T00:30:01.619Z",
+      "seat": "COORDINATOR",
+      "kind": "PASS",
+      "text": "FOMO token expired; cycle stopped.",
+      "usd": null
+    },
     {
       "at": "2026-10-05T00:24:57.181Z",
       "seat": "COORDINATOR",
@@ -458,20 +476,6 @@
       "seat": "CHIEF",
       "kind": "PASS",
       "text": "Pick declined: worth_trading_at_all 0.40 < 0.60 (best HIVE at 0.42).",
-      "usd": null
-    },
-    {
-      "at": "2026-10-04T22:50:17.964Z",
-      "seat": "VET",
-      "kind": "RESEARCH",
-      "text": "SWAP passed all gates",
-      "usd": null
-    },
-    {
-      "at": "2026-10-04T22:50:17.964Z",
-      "seat": "VET",
-      "kind": "RESEARCH",
-      "text": "HIVE passed all gates",
       "usd": null
     }
   ]
