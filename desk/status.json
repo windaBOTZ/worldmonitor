@@ -1,11 +1,11 @@
 {
-  "updated_at": "2026-10-05T00:19:50.532Z",
+  "updated_at": "2026-10-05T00:24:57.428Z",
   "mode": "shadow",
   "seats": [
     {
       "name": "SCAN",
       "status": "warn",
-      "note": "DexScreener rate-limited (1015) at 19:19 CT; standing down"
+      "note": "DexScreener rate-limited (1015) at 19:24 CT; standing down"
     },
     {
       "name": "VET",
@@ -44,9 +44,9 @@
     }
   ],
   "last_cycle": {
-    "at": "2026-10-05T00:19:50.279Z",
+    "at": "2026-10-05T00:24:57.181Z",
     "outcome": "aborted",
-    "universe": 0,
+    "universe": 72,
     "survivors": 0,
     "reason": "DexScreener rate-limited this box (Cloudflare 1015); cycle stood down, nothing benched."
   },
@@ -124,6 +124,13 @@
     }
   ],
   "activity": [
+    {
+      "at": "2026-10-05T00:24:57.181Z",
+      "seat": "COORDINATOR",
+      "kind": "PASS",
+      "text": "DexScreener rate-limited this box (Cloudflare 1015); cycle stood down, nothing benched.",
+      "usd": null
+    },
     {
       "at": "2026-10-05T00:19:50.279Z",
       "seat": "COORDINATOR",
@@ -465,13 +472,6 @@
       "seat": "VET",
       "kind": "RESEARCH",
       "text": "HIVE passed all gates",
-      "usd": null
-    },
-    {
-      "at": "2026-10-04T22:50:17.964Z",
-      "seat": "VET",
-      "kind": "RESEARCH",
-      "text": "BATONROGUE passed all gates",
       "usd": null
     }
   ]
