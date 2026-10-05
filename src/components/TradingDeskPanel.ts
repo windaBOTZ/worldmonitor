@@ -164,6 +164,7 @@ export class TradingDeskPanel extends Panel {
       <div class="td-empty" data-trading-desk="empty">
         <div class="td-empty-title">No desk data yet</div>
         <div class="td-empty-age">Last updated: ${age}</div>
+        <a class="td-hq-link" href="/desk.html">Desk HQ</a>
       </div>
     `;
   }
@@ -181,6 +182,7 @@ export class TradingDeskPanel extends Panel {
         ${staleNote}
         ${refreshNote}
         <span class="td-updated">Last updated: ${age}</span>
+        <a class="td-hq-link" href="/desk.html">Desk HQ</a>
       </div>
     `;
   }

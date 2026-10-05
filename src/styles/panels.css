@@ -4029,6 +4029,19 @@ a.hub-top-story {
   font-weight: 650;
   font-variant-numeric: tabular-nums;
 }
+.td-hq-link {
+  margin-left: auto;
+  color: var(--text);
+  font-size: calc(10px * var(--wm-panel-effective-scale, 1));
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  text-decoration: none;
+  border: 1px solid var(--border);
+  padding: 2px 6px;
+}
+.td-hq-link:hover {
+  border-color: var(--semantic-elevated, #e0a15a);
+}
 
 /* Focus ring for search inputs whose base rules suppress the outline (#6573). */
 .watchlist-search:focus-visible,

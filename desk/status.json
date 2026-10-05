@@ -1,6 +1,7 @@
 {
   "example": true,
   "updated_at": "2026-10-04T22:40:00.000Z",
+  "started_at": "2026-10-01T00:00:00.000Z",
   "mode": "shadow",
   "seats": [
     { "name": "SCAN", "status": "ok", "note": "Example: scanned 42 Solana pairs" },
@@ -63,5 +64,19 @@
     "unrealized_usd": 12.32,
     "trades": 3,
     "win_rate": 0.333
-  }
+  },
+  "history": [
+    { "at": "2026-10-01T00:00:00.000Z", "bank_usd": 10000 },
+    { "at": "2026-10-02T16:00:00.000Z", "bank_usd": 10048.2 },
+    { "at": "2026-10-03T15:04:00.000Z", "bank_usd": 9972.6 },
+    { "at": "2026-10-04T18:12:00.000Z", "bank_usd": 10021.15 },
+    { "at": "2026-10-04T22:40:00.000Z", "bank_usd": 10000 }
+  ],
+  "activity": [
+    { "at": "2026-10-04T18:12:00.000Z", "seat": "FILLS", "kind": "FILL", "text": "Example paper fill on BONK", "usd": 250 },
+    { "at": "2026-10-04T19:40:00.000Z", "seat": "RISK", "kind": "RESEARCH", "text": "Example exposure check", "usd": null },
+    { "at": "2026-10-04T21:05:00.000Z", "seat": "FILLS", "kind": "SETTLE", "text": "Example closed PEPE ticket", "usd": -16.4 },
+    { "at": "2026-10-04T22:39:12.000Z", "seat": "CHIEF", "kind": "ORDER", "text": "Example shadow pick", "usd": 250 },
+    { "at": "2026-10-04T22:40:00.000Z", "seat": "COORDINATOR", "kind": "PASS", "text": "Example cycle closed", "usd": null }
+  ]
 }

@@ -10,6 +10,7 @@ import {
   parseTradingDeskStatus,
 } from '../src/services/trading-desk.ts';
 import { TRADING_DESK_STALE_AFTER_MS } from '../src/config/trading-desk.ts';
+import { buildDeskHqView, deskPnlPercent, deskTotalPnl } from '../src/desk-hq/view.ts';
 
 const root = resolve(dirname(fileURLToPath(import.meta.url)), '..');
 const sample = JSON.parse(readFileSync(resolve(root, 'desk/status.json'), 'utf8')) as unknown;
@@ -33,6 +34,12 @@ describe('trading desk status', () => {
     assert.equal(status.positions[2]?.status, 'closed');
     assert.equal(status.totals.paper_bank_usd, 10000);
     assert.equal(status.totals.win_rate, 0.333);
+    assert.equal(status.started_at, '2026-10-01T00:00:00.000Z');
+    assert.equal(status.history.length, 5);
+    assert.equal(status.history[4]?.bank_usd, 10000);
+    assert.equal(status.activity.length, 5);
+    assert.equal(status.activity[0]?.kind, 'FILL');
+    assert.equal(status.activity[1]?.usd, null);
   });
 
   it('rejects payloads that cannot show an age', () => {
@@ -59,6 +66,39 @@ describe('trading desk status', () => {
     assert.equal(status.totals.trades, 4);
     assert.equal(status.totals.paper_bank_usd, null);
     assert.equal(status.last_cycle, null);
+    assert.deepEqual(status.history, []);
+    assert.deepEqual(status.activity, []);
+    assert.equal(status.name, '');
+    assert.equal(status.started_at, '');
+  });
+
+  it('keeps an older snapshot without history and does not treat a missing pnl side as zero', () => {
+    const status = parseTradingDeskStatus({
+      updated_at: '2026-10-05T00:00:07.787Z',
+      mode: 'shadow',
+      seats: [{ name: 'SCAN', status: 'ok', note: '62 names' }],
+      positions: [{ symbol: 'SWAP', status: 'open', pnl_usd_after_fees: -5.16 }],
+      totals: { paper_bank_usd: 1000, realized_usd: 0, unrealized_usd: -5.16, win_rate: null },
+    });
+    assert.ok(status);
+    assert.equal(status.history.length, 0);
+    assert.equal(status.totals.win_rate, null);
+    assert.equal(deskTotalPnl(status.totals), -5.16);
+    assert.equal(deskTotalPnl({ ...status.totals, unrealized_usd: null }), null);
+    const view = buildDeskHqView(status, { stale: false, refreshFailed: false, now: Date.parse(status.updated_at) });
+    assert.equal(view.dayLabel, '—');
+    assert.equal(view.uptimeLabel, '—');
+    assert.equal(view.winLabel, '—');
+    assert.equal(view.openLabel, '1');
+    assert.equal(view.history.length, 0);
+    assert.equal(view.activityTotal, 0);
+    assert.equal(view.featured?.symbol, 'SWAP');
+    assert.equal(view.showShadow, true);
+    const missing = buildDeskHqView(null, { stale: false, refreshFailed: true });
+    assert.equal(missing.hasSnapshot, false);
+    assert.equal(missing.bankLabel, '—');
+    assert.equal(missing.pnlLabel, '—');
+    assert.equal(deskPnlPercent(status.totals) != null, true);
   });
 
   it('marks a snapshot stale after the desk freshness window', () => {
@@ -67,6 +107,7 @@ describe('trading desk status', () => {
     const updatedAt = Date.parse(status.updated_at);
     assert.equal(isTradingDeskStale(status, updatedAt + TRADING_DESK_STALE_AFTER_MS), false);
     assert.equal(isTradingDeskStale(status, updatedAt + TRADING_DESK_STALE_AFTER_MS + 1), true);
+    assert.equal(formatTradingDeskAge(status.updated_at, updatedAt + 50_000), 'just now');
     assert.equal(formatTradingDeskAge(status.updated_at, updatedAt + 5 * 60_000), '5m ago');
     assert.equal(formatTradingDeskAge('not-a-date'), 'unknown');
     assert.equal(formatTradingDeskAge(null), 'unknown');

@@ -885,6 +885,23 @@ function gpsjamDevPlugin(): Plugin {
 // bypass origin isolation or Permissions Policy. Keeping these headers in the
 // dev server makes the documented local smoke meaningful while preserving the
 // production boundary: no Origin-Trial token is ever served locally.
+function deskHqDevRoutePlugin(): Plugin {
+  return {
+    name: 'desk-hq-dev-route',
+    apply: 'serve',
+    configureServer(server) {
+      server.middlewares.use((req, _res, next) => {
+        const pathname = new URL(req.url ?? '/', 'http://localhost').pathname;
+        if (pathname === '/desk') {
+          const query = req.url?.includes('?') ? req.url.slice(req.url.indexOf('?')) : '';
+          req.url = `/desk.html${query}`;
+        }
+        next();
+      });
+    },
+  };
+}
+
 function webMcpDevSecurityHeadersPlugin(): Plugin {
   return {
     name: 'wm-webmcp-dev-security-headers',
@@ -999,6 +1016,7 @@ export default defineConfig(({ mode }) => {
       // hostname). Desktop and dedicated VITE_VARIANT builds skip it.
       !isDesktopBuild && activeVariant === 'full' && variantDashboardHtmlPlugin(),
       webMcpDevSecurityHeadersPlugin(),
+      deskHqDevRoutePlugin(),
       polymarketPlugin(),
       rssProxyPlugin(),
       miitNewsPlugin(),
@@ -1209,6 +1227,7 @@ export default defineConfig(({ mode }) => {
           settings: resolve(__dirname, 'settings.html'),
           liveChannels: resolve(__dirname, 'live-channels.html'),
           mcpGrant: resolve(__dirname, 'mcp-grant.html'),
+          deskHq: resolve(__dirname, 'desk.html'),
         },
         output: {
           // onlyExplicitManualChunks keeps the panel clusters from forming
@@ -1375,6 +1394,12 @@ export default defineConfig(({ mode }) => {
             // runtime TDZ that crashed the WebGL map into the SVG fallback).
             if (id.endsWith('/src/components/DeckGLMap.ts')) {
               return 'deck-stack';
+            }
+            // Shared by the lazy Trading Desk panel and the standalone Desk HQ
+            // page. Keeping it out of panels-markets stops the desk page from
+            // pulling the markets panel cluster.
+            if (id.endsWith('/src/services/trading-desk.ts') || id.endsWith('/src/config/trading-desk.ts')) {
+              return 'trading-desk-status';
             }
             // Co-locate ResilienceWidget with its only runtime importer
             // (CountryDeepDivePanel, panels-intel). As a standalone chunk its
