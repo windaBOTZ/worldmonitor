@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-05T22:40:03.103Z",
+  "updated_at": "2026-10-05T22:45:01.859Z",
   "mode": "shadow",
   "seats": [
     {
@@ -35,16 +35,16 @@
     {
       "name": "RISK",
       "status": "ok",
-      "note": "1 open, exit rule hold; unrealized $+31.78"
+      "note": "1 open, exit rule hold; unrealized $+32.87"
     },
     {
       "name": "COORDINATOR",
       "status": "ok",
-      "note": "Cycles running; last at 17:40 CT"
+      "note": "Cycles running; last at 17:45 CT"
     }
   ],
   "last_cycle": {
-    "at": "2026-10-05T22:40:02.780Z",
+    "at": "2026-10-05T22:45:01.460Z",
     "outcome": "no_trade",
     "universe": 67,
     "survivors": 0,
@@ -56,18 +56,18 @@
       "chain": "solana",
       "address": "GYFLuEAZMDdpUsTmyGdHstuXQC3JB9ZqtZbfktpppump",
       "entry_price": 0.00028340113,
-      "current_price": 0.0005563,
+      "current_price": 0.0005651,
       "ticket_usd": 36.0,
-      "pnl_pct": 88.29,
-      "pnl_usd_after_fees": 31.78,
+      "pnl_pct": 91.31,
+      "pnl_usd_after_fees": 32.87,
       "opened_at": "2026-10-04T21:32:00.000Z",
       "status": "open"
     }
   ],
   "totals": {
-    "paper_bank_usd": 1031.78,
+    "paper_bank_usd": 1032.87,
     "realized_usd": 0.0,
-    "unrealized_usd": 31.78,
+    "unrealized_usd": 32.87,
     "trades": 1,
     "win_rate": null
   },
@@ -149,9 +149,27 @@
     {
       "at": "2026-10-05T22:40:02.980Z",
       "bank_usd": 1031.78
+    },
+    {
+      "at": "2026-10-05T22:45:01.750Z",
+      "bank_usd": 1032.87
     }
   ],
   "activity": [
+    {
+      "at": "2026-10-05T22:45:01.750Z",
+      "seat": "RISK",
+      "kind": "RESEARCH",
+      "text": "Mark SWAP 0.0005651: P&L +91.3%, exit rule hold",
+      "usd": 32.87
+    },
+    {
+      "at": "2026-10-05T22:45:01.458Z",
+      "seat": "SCAN",
+      "kind": "KILL",
+      "text": "Free cut 4: age 2, liquidity 2",
+      "usd": null
+    },
     {
       "at": "2026-10-05T22:40:02.980Z",
       "seat": "RISK",
@@ -487,20 +505,6 @@
       "kind": "RESEARCH",
       "text": "Mark SWAP 0.0002574: P&L -14.3%, exit rule hold",
       "usd": -5.16
-    },
-    {
-      "at": "2026-10-05T00:00:07.436Z",
-      "seat": "CHIEF",
-      "kind": "PASS",
-      "text": "Pick declined: worth_trading_at_all 0.40 < 0.60 (best Army at 0.29).",
-      "usd": null
-    },
-    {
-      "at": "2026-10-05T00:00:07.436Z",
-      "seat": "VET",
-      "kind": "RESEARCH",
-      "text": "Army passed all gates",
-      "usd": null
     }
   ]
 }
