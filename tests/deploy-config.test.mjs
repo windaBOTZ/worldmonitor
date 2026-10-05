@@ -113,6 +113,7 @@ const GLOBAL_CSP_EXTERNAL_SCRIPT_HTML_FILES = [
   'settings.html',
   'live-channels.html',
   'mcp-grant.html',
+  'desk.html',
   'public/pro/index.html',
   'public/pro/welcome.html',
 ];

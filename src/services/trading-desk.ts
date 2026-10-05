@@ -54,13 +54,32 @@ export interface TradingDeskTotals {
   win_rate: number | null;
 }
 
+export interface TradingDeskHistoryPoint {
+  at: string;
+  bank_usd: number | null;
+}
+
+export interface TradingDeskActivity {
+  at: string;
+  seat: string;
+  kind: string;
+  text: string;
+  usd: number | null;
+}
+
 export interface TradingDeskStatus {
   updated_at: string;
   mode: string;
+  /** Optional display name. Empty when the file does not set one. */
+  name: string;
+  /** Optional ISO-8601 instant the paper book started. Empty when absent. */
+  started_at: string;
   seats: TradingDeskSeat[];
   last_cycle: TradingDeskCycle | null;
   positions: TradingDeskPosition[];
   totals: TradingDeskTotals;
+  history: TradingDeskHistoryPoint[];
+  activity: TradingDeskActivity[];
 }
 
 export type TradingDeskLoadFailure = 'missing' | 'unreachable' | 'invalid';
@@ -142,8 +161,33 @@ function parseTotals(value: unknown): TradingDeskTotals {
   };
 }
 
+function parseHistoryPoint(value: unknown): TradingDeskHistoryPoint | null {
+  if (!isRecord(value)) return null;
+  const at = asString(value.at).trim();
+  const bank = asNumber(value.bank_usd);
+  if (!at && bank == null) return null;
+  return { at, bank_usd: bank };
+}
+
+function parseActivity(value: unknown): TradingDeskActivity | null {
+  if (!isRecord(value)) return null;
+  const at = asString(value.at).trim();
+  const seat = asString(value.seat).trim();
+  const kind = asString(value.kind).trim().toUpperCase();
+  const text = asString(value.text);
+  if (!at && !seat && !kind && !text.trim()) return null;
+  return { at, seat, kind, text, usd: asNumber(value.usd) };
+}
+
+function parseList<T>(value: unknown, parse: (item: unknown) => T | null): T[] {
+  if (!Array.isArray(value)) return [];
+  return value.map(parse).filter((item): item is T => item !== null);
+}
+
 /**
- * Accept a desk status document. Extra fields (including `example`) are ignored.
+ * Accept a desk status document. Unknown extra fields (including `example`)
+ * are ignored. `history`, `activity`, `name`, and `started_at` are optional
+ * and stay empty when an older file omits them.
  * Returns null when the payload has no `updated_at`, which the panel treats
  * as "no desk data yet".
  */
@@ -160,10 +204,14 @@ export function parseTradingDeskStatus(value: unknown): TradingDeskStatus | null
   return {
     updated_at: updatedAt,
     mode: asString(value.mode).trim().toLowerCase() || 'unknown',
+    name: asString(value.name).trim(),
+    started_at: asString(value.started_at).trim(),
     seats,
     last_cycle: parseCycle(value.last_cycle),
     positions,
     totals: parseTotals(value.totals),
+    history: parseList(value.history, parseHistoryPoint),
+    activity: parseList(value.activity, parseActivity),
   };
 }
 
@@ -178,8 +226,8 @@ export function formatTradingDeskAge(updatedAt: string | null | undefined, now =
   const parsed = Date.parse(updatedAt);
   if (!Number.isFinite(parsed)) return 'unknown';
   const delta = Math.max(0, now - parsed);
-  if (delta < 45_000) return 'just now';
   const minutes = Math.floor(delta / 60_000);
+  if (minutes < 1) return 'just now';
   if (minutes < 60) return `${minutes}m ago`;
   const hours = Math.floor(minutes / 60);
   if (hours < 48) return `${hours}h ago`;

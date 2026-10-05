@@ -307,6 +307,7 @@ describe('webmcp.ts: current API contract', () => {
       'settings.html',
       'live-channels.html',
       'mcp-grant.html',
+      'desk.html',
       'pro-test/welcome.html',
     ]) {
       const html = readFileSync(resolve(ROOT, htmlPath), 'utf-8');

@@ -55,6 +55,10 @@ http {
       try_files /embed.js =404;
     }
 
+    location = /desk {
+      rewrite ^ /desk.html last;
+    }
+
     location / {
       include /etc/nginx/security_headers.conf;
       # Generated corpus directories (e.g. /compare/) contain only index.html;

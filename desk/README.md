@@ -14,6 +14,8 @@ A value that is not an absolute HTTP(S) URL is ignored. The panel then shows **N
 
 The panel polls about every 60 seconds while it is on screen. A snapshot whose `updated_at` is older than 15 minutes is still rendered, with a **Stale** marker and the last-updated age. A missing file, a network failure, or JSON that has no `updated_at` shows **No desk data yet** and the last-updated age (`unknown` until a snapshot has been read). Those failures stay inside the panel.
 
+Desk HQ (`/desk`, also `desk.html`) is a separate full-page view of the same file. It polls on the same 60 second interval. The Trading Desk panel links to it. Numbers on that page come only from this document: a missing `history` or `activity` array leaves that section empty, and a missing total renders as an em dash.
+
 ## Schema
 
 `example` is optional. The panel ignores it. Use it on sample files so a reader can tell they are not live.
@@ -53,7 +55,14 @@ The panel polls about every 60 seconds while it is on screen. A snapshot whose `
     "unrealized_usd": 12.32,
     "trades": 3,
     "win_rate": 0.333
-  }
+  },
+  "started_at": "2026-10-01T00:00:00.000Z",
+  "history": [
+    { "at": "2026-10-01T00:00:00.000Z", "bank_usd": 10000 }
+  ],
+  "activity": [
+    { "at": "2026-10-04T22:39:12.000Z", "seat": "CHIEF", "kind": "ORDER", "text": "what happened", "usd": 250 }
+  ]
 }
 ```
 
@@ -71,6 +80,12 @@ The panel polls about every 60 seconds while it is on screen. A snapshot whose `
 | `positions[].pnl_pct` | Percent return on the ticket, after fees. Positive is green. |
 | `positions[].pnl_usd_after_fees` | Dollar P&L after fees. |
 | `totals.paper_bank_usd` | Paper capital, not a live balance. |
-| `totals.win_rate` | Fraction from 0 to 1. A value already above 1 is shown as a percent. |
+| `totals.win_rate` | Fraction from 0 to 1. A value already above 1 is shown as a percent. `null` renders as an em dash. |
+| `name` | Optional desk title. Desk HQ uses **Desk HQ** when this is empty. |
+| `started_at` | Optional ISO-8601 start. Desk HQ derives day and uptime from `started_at` to `updated_at`. Missing or out of order stays an em dash. |
+| `history[]` | Optional `{ at, bank_usd }` points for the balance chart. Older files omit this. |
+| `activity[]` | Optional log rows: `{ at, seat, kind, text, usd }`. `kind` is usually `ORDER`, `FILL`, `RESEARCH`, `SETTLE`, `KILL`, or `PASS`. Other kinds still render. |
 
-Unknown extra fields are ignored. Missing optional numbers render as an em dash. A seat or position without a name or symbol is skipped.
+Unknown extra fields are ignored. Missing optional numbers render as an em dash. A seat or position without a name or symbol is skipped. A history point needs both a time and a bank figure to be drawn. An activity row with no time, seat, kind, or text is skipped.
+
+Desk HQ total P&L is `realized_usd + unrealized_usd` only when both numbers are present. The percent is that sum divided by `paper_bank_usd` minus the sum (the paper bank before this P&L). If either input is missing, or the divisor is 0, the percent is an em dash. Open positions are a count of rows whose `status` is `open`.
