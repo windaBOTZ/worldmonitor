@@ -1,11 +1,11 @@
 {
-  "updated_at": "2026-10-05T23:39:38.214Z",
+  "updated_at": "2026-10-05T23:44:18.458Z",
   "mode": "shadow",
   "seats": [
     {
       "name": "SCAN",
-      "status": "ok",
-      "note": "63 names, 45 FOMO rows"
+      "status": "warn",
+      "note": "DexScreener rate-limited (1015) at 18:44 CT; standing down"
     },
     {
       "name": "VET",
@@ -19,8 +19,8 @@
     },
     {
       "name": "CHIEF",
-      "status": "ok",
-      "note": "Single survivor declined: worth_trading_at_all below 0.60."
+      "status": "idle",
+      "note": "No pick to make this cycle"
     },
     {
       "name": "SIZE",
@@ -29,8 +29,8 @@
     },
     {
       "name": "FILLS",
-      "status": "ok",
-      "note": "1 paper fill(s) recorded, marks current"
+      "status": "warn",
+      "note": "Last price mark failed (DexScreener rate limit); using previous mark"
     },
     {
       "name": "RISK",
@@ -39,16 +39,16 @@
     },
     {
       "name": "COORDINATOR",
-      "status": "ok",
-      "note": "Cycles running; last at 18:39 CT"
+      "status": "warn",
+      "note": "Last cycle aborted (dex_rate_limited)"
     }
   ],
   "last_cycle": {
-    "at": "2026-10-05T23:39:37.876Z",
-    "outcome": "no_trade",
-    "universe": 63,
-    "survivors": 1,
-    "reason": "Single survivor declined: worth_trading_at_all below 0.60."
+    "at": "2026-10-05T23:44:18.144Z",
+    "outcome": "aborted",
+    "universe": 0,
+    "survivors": 0,
+    "reason": "DexScreener rate-limited this box (Cloudflare 1015); cycle stood down, nothing benched."
   },
   "positions": [
     {
@@ -188,6 +188,13 @@
     }
   ],
   "activity": [
+    {
+      "at": "2026-10-05T23:44:18.144Z",
+      "seat": "COORDINATOR",
+      "kind": "PASS",
+      "text": "DexScreener rate-limited this box (Cloudflare 1015); cycle stood down, nothing benched.",
+      "usd": null
+    },
     {
       "at": "2026-10-05T23:39:38.094Z",
       "seat": "RISK",
@@ -529,13 +536,6 @@
       "seat": "CHIEF",
       "kind": "PASS",
       "text": "Single survivor declined: worth_trading_at_all below 0.60.",
-      "usd": null
-    },
-    {
-      "at": "2026-10-05T22:50:05.422Z",
-      "seat": "VET",
-      "kind": "KILL",
-      "text": "USEFUL killed: momentum_already_spent",
       "usd": null
     }
   ]
