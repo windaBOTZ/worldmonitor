@@ -1,11 +1,11 @@
 {
-  "updated_at": "2026-10-05T00:14:50.721Z",
+  "updated_at": "2026-10-05T00:19:50.532Z",
   "mode": "shadow",
   "seats": [
     {
       "name": "SCAN",
       "status": "warn",
-      "note": "DexScreener rate-limited (1015) at 19:14 CT; standing down"
+      "note": "DexScreener rate-limited (1015) at 19:19 CT; standing down"
     },
     {
       "name": "VET",
@@ -44,7 +44,7 @@
     }
   ],
   "last_cycle": {
-    "at": "2026-10-05T00:14:50.485Z",
+    "at": "2026-10-05T00:19:50.279Z",
     "outcome": "aborted",
     "universe": 0,
     "survivors": 0,
@@ -124,6 +124,13 @@
     }
   ],
   "activity": [
+    {
+      "at": "2026-10-05T00:19:50.279Z",
+      "seat": "COORDINATOR",
+      "kind": "PASS",
+      "text": "DexScreener rate-limited this box (Cloudflare 1015); cycle stood down, nothing benched.",
+      "usd": null
+    },
     {
       "at": "2026-10-05T00:14:50.485Z",
       "seat": "COORDINATOR",
@@ -465,13 +472,6 @@
       "seat": "VET",
       "kind": "RESEARCH",
       "text": "BATONROGUE passed all gates",
-      "usd": null
-    },
-    {
-      "at": "2026-10-04T22:50:17.963Z",
-      "seat": "VET",
-      "kind": "KILL",
-      "text": "chain kill holders x1",
       "usd": null
     }
   ]
