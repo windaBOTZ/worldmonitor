@@ -1,16 +1,16 @@
 {
-  "updated_at": "2026-10-05T22:30:07.935Z",
+  "updated_at": "2026-10-05T22:35:06.518Z",
   "mode": "shadow",
   "seats": [
     {
       "name": "SCAN",
       "status": "ok",
-      "note": "67 names, 48 FOMO rows"
+      "note": "67 names, 50 FOMO rows"
     },
     {
       "name": "VET",
       "status": "warn",
-      "note": "6/6 judged with top-wallet/top-10 unknown (RPC/GT rate-limited); size capped 0.3"
+      "note": "3/3 judged with top-wallet/top-10 unknown (RPC/GT rate-limited); size capped 0.3"
     },
     {
       "name": "SOCIAL",
@@ -20,7 +20,7 @@
     {
       "name": "CHIEF",
       "status": "ok",
-      "note": "Pick declined: worth_trading_at_all 0.38 < 0.60"
+      "note": "Single survivor declined: worth_trading_at_all below 0.60."
     },
     {
       "name": "SIZE",
@@ -35,20 +35,20 @@
     {
       "name": "RISK",
       "status": "ok",
-      "note": "1 open, exit rule hold; unrealized $+30.76"
+      "note": "1 open, exit rule hold; unrealized $+31.96"
     },
     {
       "name": "COORDINATOR",
       "status": "ok",
-      "note": "Cycles running; last at 17:30 CT"
+      "note": "Cycles running; last at 17:35 CT"
     }
   ],
   "last_cycle": {
-    "at": "2026-10-05T22:30:07.596Z",
+    "at": "2026-10-05T22:35:06.146Z",
     "outcome": "no_trade",
     "universe": 67,
-    "survivors": 2,
-    "reason": "Pick declined: worth_trading_at_all 0.38 < 0.60 (best SOLgiving at 0.37)."
+    "survivors": 1,
+    "reason": "Single survivor declined: worth_trading_at_all below 0.60."
   },
   "positions": [
     {
@@ -56,18 +56,18 @@
       "chain": "solana",
       "address": "GYFLuEAZMDdpUsTmyGdHstuXQC3JB9ZqtZbfktpppump",
       "entry_price": 0.00028340113,
-      "current_price": 0.000548,
+      "current_price": 0.0005577,
       "ticket_usd": 36.0,
-      "pnl_pct": 85.44,
-      "pnl_usd_after_fees": 30.76,
+      "pnl_pct": 88.77,
+      "pnl_usd_after_fees": 31.96,
       "opened_at": "2026-10-04T21:32:00.000Z",
       "status": "open"
     }
   ],
   "totals": {
-    "paper_bank_usd": 1030.76,
+    "paper_bank_usd": 1031.96,
     "realized_usd": 0.0,
-    "unrealized_usd": 30.76,
+    "unrealized_usd": 31.96,
     "trades": 1,
     "win_rate": null
   },
@@ -141,9 +141,62 @@
     {
       "at": "2026-10-05T22:30:07.820Z",
       "bank_usd": 1030.76
+    },
+    {
+      "at": "2026-10-05T22:35:06.358Z",
+      "bank_usd": 1031.96
     }
   ],
   "activity": [
+    {
+      "at": "2026-10-05T22:35:06.358Z",
+      "seat": "RISK",
+      "kind": "RESEARCH",
+      "text": "Mark SWAP 0.0005577: P&L +88.8%, exit rule hold",
+      "usd": 31.96
+    },
+    {
+      "at": "2026-10-05T22:35:06.146Z",
+      "seat": "CHIEF",
+      "kind": "PASS",
+      "text": "Single survivor declined: worth_trading_at_all below 0.60.",
+      "usd": null
+    },
+    {
+      "at": "2026-10-05T22:35:06.145Z",
+      "seat": "VET",
+      "kind": "KILL",
+      "text": "chain kill top_10 x1",
+      "usd": null
+    },
+    {
+      "at": "2026-10-05T22:35:06.145Z",
+      "seat": "VET",
+      "kind": "KILL",
+      "text": "CLIP killed: momentum_already_spent",
+      "usd": null
+    },
+    {
+      "at": "2026-10-05T22:35:06.145Z",
+      "seat": "VET",
+      "kind": "KILL",
+      "text": "INCOGNITO killed: momentum_already_spent",
+      "usd": null
+    },
+    {
+      "at": "2026-10-05T22:35:06.145Z",
+      "seat": "VET",
+      "kind": "RESEARCH",
+      "text": "SOLgiving passed all gates",
+      "usd": null
+    },
+    {
+      "at": "2026-10-05T22:35:06.144Z",
+      "seat": "SCAN",
+      "kind": "KILL",
+      "text": "Free cut 3: age 2, liquidity 1",
+      "usd": null
+    },
     {
       "at": "2026-10-05T22:30:07.820Z",
       "seat": "RISK",
@@ -443,55 +496,6 @@
       "seat": "SCAN",
       "kind": "KILL",
       "text": "Free cut 3: age 3",
-      "usd": null
-    },
-    {
-      "at": "2026-10-04T23:55:12.345Z",
-      "seat": "RISK",
-      "kind": "RESEARCH",
-      "text": "Mark SWAP 0.000309: P&L +3.4%, exit rule hold",
-      "usd": 1.21
-    },
-    {
-      "at": "2026-10-04T23:55:12.147Z",
-      "seat": "CHIEF",
-      "kind": "PASS",
-      "text": "Pick declined: worth_trading_at_all 0.42 < 0.60 (best zDOG at 0.20).",
-      "usd": null
-    },
-    {
-      "at": "2026-10-04T23:55:12.146Z",
-      "seat": "VET",
-      "kind": "KILL",
-      "text": "EGO killed: momentum_already_spent, shape",
-      "usd": null
-    },
-    {
-      "at": "2026-10-04T23:55:12.146Z",
-      "seat": "VET",
-      "kind": "RESEARCH",
-      "text": "Army passed all gates",
-      "usd": null
-    },
-    {
-      "at": "2026-10-04T23:55:12.146Z",
-      "seat": "VET",
-      "kind": "KILL",
-      "text": "SHIBLING killed: momentum_already_spent, shape",
-      "usd": null
-    },
-    {
-      "at": "2026-10-04T23:55:12.146Z",
-      "seat": "VET",
-      "kind": "RESEARCH",
-      "text": "zDOG passed all gates",
-      "usd": null
-    },
-    {
-      "at": "2026-10-04T23:55:12.146Z",
-      "seat": "VET",
-      "kind": "KILL",
-      "text": "BATONROGUE killed: momentum_already_spent",
       "usd": null
     }
   ]
