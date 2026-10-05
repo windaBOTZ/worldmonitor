@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-05T00:10:05.715Z",
+  "updated_at": "2026-10-05T00:14:32.014Z",
   "mode": "shadow",
   "seats": [
     {
@@ -65,10 +65,414 @@
     }
   ],
   "totals": {
-    "paper_bank_usd": 1000.0,
+    "paper_bank_usd": 1003.77,
     "realized_usd": 0.0,
     "unrealized_usd": 3.77,
     "trades": 1,
     "win_rate": null
-  }
+  },
+  "name": "Desk HQ",
+  "started_at": "2026-10-04T22:44:27.843Z",
+  "history": [
+    {
+      "at": "2026-10-04T21:32:00.000Z",
+      "bank_usd": 999.05
+    },
+    {
+      "at": "2026-10-04T22:45:03.046Z",
+      "bank_usd": 1008.93
+    },
+    {
+      "at": "2026-10-04T22:49:25.305Z",
+      "bank_usd": 1009.98
+    },
+    {
+      "at": "2026-10-04T22:50:18.171Z",
+      "bank_usd": 1010.83
+    },
+    {
+      "at": "2026-10-04T22:55:17.411Z",
+      "bank_usd": 1014.41
+    },
+    {
+      "at": "2026-10-04T23:00:20.260Z",
+      "bank_usd": 1009.23
+    },
+    {
+      "at": "2026-10-04T23:05:16.747Z",
+      "bank_usd": 1013.81
+    },
+    {
+      "at": "2026-10-04T23:10:16.697Z",
+      "bank_usd": 1013.83
+    },
+    {
+      "at": "2026-10-04T23:15:16.714Z",
+      "bank_usd": 1015.98
+    },
+    {
+      "at": "2026-10-04T23:55:12.345Z",
+      "bank_usd": 1001.21
+    },
+    {
+      "at": "2026-10-05T00:00:07.672Z",
+      "bank_usd": 994.84
+    },
+    {
+      "at": "2026-10-05T00:10:05.603Z",
+      "bank_usd": 1003.77
+    }
+  ],
+  "activity": [
+    {
+      "at": "2026-10-05T00:10:05.603Z",
+      "seat": "RISK",
+      "kind": "RESEARCH",
+      "text": "Mark SWAP 0.0003297: P&L +10.5%, exit rule hold",
+      "usd": 3.77
+    },
+    {
+      "at": "2026-10-05T00:10:05.375Z",
+      "seat": "CHIEF",
+      "kind": "PASS",
+      "text": "Single survivor declined: worth_trading_at_all below 0.60.",
+      "usd": null
+    },
+    {
+      "at": "2026-10-05T00:10:05.375Z",
+      "seat": "VET",
+      "kind": "RESEARCH",
+      "text": "Army passed all gates",
+      "usd": null
+    },
+    {
+      "at": "2026-10-05T00:10:05.373Z",
+      "seat": "SCAN",
+      "kind": "KILL",
+      "text": "Free cut 6: age 4, mcap 2",
+      "usd": null
+    },
+    {
+      "at": "2026-10-05T00:05:00.451Z",
+      "seat": "COORDINATOR",
+      "kind": "PASS",
+      "text": "DexScreener rate-limited this box (Cloudflare 1015); cycle stood down, nothing benched.",
+      "usd": null
+    },
+    {
+      "at": "2026-10-05T00:00:07.672Z",
+      "seat": "RISK",
+      "kind": "RESEARCH",
+      "text": "Mark SWAP 0.0002574: P&L -14.3%, exit rule hold",
+      "usd": -5.16
+    },
+    {
+      "at": "2026-10-05T00:00:07.436Z",
+      "seat": "CHIEF",
+      "kind": "PASS",
+      "text": "Pick declined: worth_trading_at_all 0.40 < 0.60 (best Army at 0.29).",
+      "usd": null
+    },
+    {
+      "at": "2026-10-05T00:00:07.436Z",
+      "seat": "VET",
+      "kind": "RESEARCH",
+      "text": "Army passed all gates",
+      "usd": null
+    },
+    {
+      "at": "2026-10-05T00:00:07.436Z",
+      "seat": "VET",
+      "kind": "RESEARCH",
+      "text": "zDOG passed all gates",
+      "usd": null
+    },
+    {
+      "at": "2026-10-05T00:00:07.436Z",
+      "seat": "VET",
+      "kind": "RESEARCH",
+      "text": "Robinhood passed all gates",
+      "usd": null
+    },
+    {
+      "at": "2026-10-05T00:00:07.434Z",
+      "seat": "SCAN",
+      "kind": "KILL",
+      "text": "Free cut 3: age 3",
+      "usd": null
+    },
+    {
+      "at": "2026-10-04T23:55:12.345Z",
+      "seat": "RISK",
+      "kind": "RESEARCH",
+      "text": "Mark SWAP 0.000309: P&L +3.4%, exit rule hold",
+      "usd": 1.21
+    },
+    {
+      "at": "2026-10-04T23:55:12.147Z",
+      "seat": "CHIEF",
+      "kind": "PASS",
+      "text": "Pick declined: worth_trading_at_all 0.42 < 0.60 (best zDOG at 0.20).",
+      "usd": null
+    },
+    {
+      "at": "2026-10-04T23:55:12.146Z",
+      "seat": "VET",
+      "kind": "KILL",
+      "text": "EGO killed: momentum_already_spent, shape",
+      "usd": null
+    },
+    {
+      "at": "2026-10-04T23:55:12.146Z",
+      "seat": "VET",
+      "kind": "RESEARCH",
+      "text": "Army passed all gates",
+      "usd": null
+    },
+    {
+      "at": "2026-10-04T23:55:12.146Z",
+      "seat": "VET",
+      "kind": "KILL",
+      "text": "SHIBLING killed: momentum_already_spent, shape",
+      "usd": null
+    },
+    {
+      "at": "2026-10-04T23:55:12.146Z",
+      "seat": "VET",
+      "kind": "RESEARCH",
+      "text": "zDOG passed all gates",
+      "usd": null
+    },
+    {
+      "at": "2026-10-04T23:55:12.146Z",
+      "seat": "VET",
+      "kind": "KILL",
+      "text": "BATONROGUE killed: momentum_already_spent",
+      "usd": null
+    },
+    {
+      "at": "2026-10-04T23:55:12.146Z",
+      "seat": "VET",
+      "kind": "KILL",
+      "text": "PLAGUE killed: momentum_already_spent",
+      "usd": null
+    },
+    {
+      "at": "2026-10-04T23:55:12.145Z",
+      "seat": "SCAN",
+      "kind": "KILL",
+      "text": "Free cut 34: liquidity 22, mcap 5, age 4, volume 3",
+      "usd": null
+    },
+    {
+      "at": "2026-10-04T23:25:01.368Z",
+      "seat": "COORDINATOR",
+      "kind": "PASS",
+      "text": "DexScreener rate-limited this box (Cloudflare 1015); cycle stood down, nothing benched.",
+      "usd": null
+    },
+    {
+      "at": "2026-10-04T23:20:03.970Z",
+      "seat": "COORDINATOR",
+      "kind": "PASS",
+      "text": "DexScreener rate-limited this box (Cloudflare 1015); cycle stood down, nothing benched.",
+      "usd": null
+    },
+    {
+      "at": "2026-10-04T23:15:16.714Z",
+      "seat": "RISK",
+      "kind": "RESEARCH",
+      "text": "Mark SWAP 0.0004285: P&L +44.4%, exit rule hold",
+      "usd": 15.98
+    },
+    {
+      "at": "2026-10-04T23:15:16.470Z",
+      "seat": "VET",
+      "kind": "KILL",
+      "text": "Robinhood killed: shape_weak",
+      "usd": null
+    },
+    {
+      "at": "2026-10-04T23:15:16.469Z",
+      "seat": "VET",
+      "kind": "KILL",
+      "text": "chain kill top_10 x1",
+      "usd": null
+    },
+    {
+      "at": "2026-10-04T23:15:16.468Z",
+      "seat": "SCAN",
+      "kind": "KILL",
+      "text": "Free cut 9: liquidity 5, mcap 2, age 1, volume 1",
+      "usd": null
+    },
+    {
+      "at": "2026-10-04T23:10:16.697Z",
+      "seat": "RISK",
+      "kind": "RESEARCH",
+      "text": "Mark SWAP 0.0004111: P&L +38.4%, exit rule hold",
+      "usd": 13.83
+    },
+    {
+      "at": "2026-10-04T23:10:16.480Z",
+      "seat": "VET",
+      "kind": "KILL",
+      "text": "EGO killed: momentum_already_spent, shape",
+      "usd": null
+    },
+    {
+      "at": "2026-10-04T23:10:16.480Z",
+      "seat": "VET",
+      "kind": "KILL",
+      "text": "SHIBLING killed: momentum_already_spent",
+      "usd": null
+    },
+    {
+      "at": "2026-10-04T23:10:16.479Z",
+      "seat": "SCAN",
+      "kind": "KILL",
+      "text": "Free cut 19: liquidity 15, mcap 3, volume 1",
+      "usd": null
+    },
+    {
+      "at": "2026-10-04T23:05:16.747Z",
+      "seat": "RISK",
+      "kind": "RESEARCH",
+      "text": "Mark SWAP 0.0004109: P&L +38.4%, exit rule hold",
+      "usd": 13.81
+    },
+    {
+      "at": "2026-10-04T23:05:16.539Z",
+      "seat": "VET",
+      "kind": "KILL",
+      "text": "PSTR killed: concentration_is_exit_risk, momentum_already_spent, shape",
+      "usd": null
+    },
+    {
+      "at": "2026-10-04T23:05:16.537Z",
+      "seat": "SCAN",
+      "kind": "KILL",
+      "text": "Free cut 5: liquidity 4, mcap 1",
+      "usd": null
+    },
+    {
+      "at": "2026-10-04T23:00:20.260Z",
+      "seat": "RISK",
+      "kind": "RESEARCH",
+      "text": "Mark SWAP 0.0003739: P&L +25.7%, exit rule hold",
+      "usd": 9.23
+    },
+    {
+      "at": "2026-10-04T23:00:20.047Z",
+      "seat": "VET",
+      "kind": "KILL",
+      "text": "SWAP killed: momentum_already_spent",
+      "usd": null
+    },
+    {
+      "at": "2026-10-04T23:00:20.047Z",
+      "seat": "VET",
+      "kind": "KILL",
+      "text": "BATONROGUE killed: momentum_already_spent",
+      "usd": null
+    },
+    {
+      "at": "2026-10-04T23:00:20.046Z",
+      "seat": "SCAN",
+      "kind": "KILL",
+      "text": "Free cut 2: age 1, liquidity 1",
+      "usd": null
+    },
+    {
+      "at": "2026-10-04T22:55:17.411Z",
+      "seat": "RISK",
+      "kind": "RESEARCH",
+      "text": "Mark SWAP 0.0004158: P&L +40.0%, exit rule hold",
+      "usd": 14.41
+    },
+    {
+      "at": "2026-10-04T22:55:17.207Z",
+      "seat": "CHIEF",
+      "kind": "PASS",
+      "text": "Pick declined: worth_trading_at_all 0.45 < 0.60 (best SWAP at 0.31).",
+      "usd": null
+    },
+    {
+      "at": "2026-10-04T22:55:17.207Z",
+      "seat": "VET",
+      "kind": "RESEARCH",
+      "text": "SWAP passed all gates",
+      "usd": null
+    },
+    {
+      "at": "2026-10-04T22:55:17.207Z",
+      "seat": "VET",
+      "kind": "RESEARCH",
+      "text": "BATONROGUE passed all gates",
+      "usd": null
+    },
+    {
+      "at": "2026-10-04T22:55:17.206Z",
+      "seat": "VET",
+      "kind": "KILL",
+      "text": "chain kill top_10 x1",
+      "usd": null
+    },
+    {
+      "at": "2026-10-04T22:55:17.205Z",
+      "seat": "SCAN",
+      "kind": "KILL",
+      "text": "Free cut 5: age 3, liquidity 2",
+      "usd": null
+    },
+    {
+      "at": "2026-10-04T22:50:18.171Z",
+      "seat": "RISK",
+      "kind": "RESEARCH",
+      "text": "Mark SWAP 0.0003868: P&L +30.1%, exit rule hold",
+      "usd": 10.83
+    },
+    {
+      "at": "2026-10-04T22:50:17.964Z",
+      "seat": "CHIEF",
+      "kind": "PASS",
+      "text": "Pick declined: worth_trading_at_all 0.40 < 0.60 (best HIVE at 0.42).",
+      "usd": null
+    },
+    {
+      "at": "2026-10-04T22:50:17.964Z",
+      "seat": "VET",
+      "kind": "RESEARCH",
+      "text": "SWAP passed all gates",
+      "usd": null
+    },
+    {
+      "at": "2026-10-04T22:50:17.964Z",
+      "seat": "VET",
+      "kind": "RESEARCH",
+      "text": "HIVE passed all gates",
+      "usd": null
+    },
+    {
+      "at": "2026-10-04T22:50:17.964Z",
+      "seat": "VET",
+      "kind": "RESEARCH",
+      "text": "BATONROGUE passed all gates",
+      "usd": null
+    },
+    {
+      "at": "2026-10-04T22:50:17.963Z",
+      "seat": "VET",
+      "kind": "KILL",
+      "text": "chain kill holders x1",
+      "usd": null
+    },
+    {
+      "at": "2026-10-04T22:50:17.962Z",
+      "seat": "SCAN",
+      "kind": "KILL",
+      "text": "Free cut 1: age 1",
+      "usd": null
+    }
+  ]
 }
