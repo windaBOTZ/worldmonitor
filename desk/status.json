@@ -1,11 +1,11 @@
 {
-  "updated_at": "2026-10-06T02:03:46.969Z",
+  "updated_at": "2026-10-06T02:08:46.434Z",
   "mode": "shadow",
   "seats": [
     {
       "name": "SCAN",
       "status": "ok",
-      "note": "64 names, 46 FOMO rows"
+      "note": "64 names, 45 FOMO rows"
     },
     {
       "name": "VET",
@@ -20,7 +20,7 @@
     {
       "name": "CHIEF",
       "status": "ok",
-      "note": "Single survivor USEFUL declined: worth_trading_at_all 0.36 < 0.45"
+      "note": "Pick declined: best puter confidence 0.02 < 0.55"
     },
     {
       "name": "SIZE",
@@ -35,20 +35,20 @@
     {
       "name": "RISK",
       "status": "ok",
-      "note": "1 open (0 past take-profit, trailing); SL/TP/trail armed; unrealized $+9.10"
+      "note": "1 open (0 past take-profit, trailing); SL/TP/trail armed; unrealized $+8.95"
     },
     {
       "name": "COORDINATOR",
       "status": "ok",
-      "note": "Cycles running; last at 21:03 CT"
+      "note": "Cycles running; last at 21:08 CT"
     }
   ],
   "last_cycle": {
-    "at": "2026-10-06T02:03:46.609Z",
+    "at": "2026-10-06T02:08:46.071Z",
     "outcome": "no_trade",
     "universe": 64,
-    "survivors": 1,
-    "reason": "Single survivor USEFUL declined: worth_trading_at_all 0.36 < 0.45 (PAPER_WORTH_MIN)."
+    "survivors": 2,
+    "reason": "Pick declined: best puter confidence 0.02 < 0.55 (worth 0.45 passed PAPER_WORTH_MIN 0.45)."
   },
   "positions": [
     {
@@ -56,10 +56,10 @@
       "chain": "solana",
       "address": "GYFLuEAZMDdpUsTmyGdHstuXQC3JB9ZqtZbfktpppump",
       "entry_price": 0.00028340113,
-      "current_price": 0.0003728,
+      "current_price": 0.0003716,
       "ticket_usd": 36.0,
-      "pnl_pct": 25.28,
-      "pnl_usd_after_fees": 9.1,
+      "pnl_pct": 24.87,
+      "pnl_usd_after_fees": 8.95,
       "opened_at": "2026-10-04T21:32:00.000Z",
       "status": "open",
       "realized_usd": 0.0,
@@ -68,9 +68,9 @@
     }
   ],
   "totals": {
-    "paper_bank_usd": 1009.1,
+    "paper_bank_usd": 1008.95,
     "realized_usd": 0.0,
-    "unrealized_usd": 9.1,
+    "unrealized_usd": 8.95,
     "trades": 1,
     "win_rate": null
   },
@@ -260,9 +260,48 @@
     {
       "at": "2026-10-06T02:03:46.849Z",
       "bank_usd": 1009.1
+    },
+    {
+      "at": "2026-10-06T02:08:46.318Z",
+      "bank_usd": 1008.95
     }
   ],
   "activity": [
+    {
+      "at": "2026-10-06T02:08:46.318Z",
+      "seat": "RISK",
+      "kind": "RESEARCH",
+      "text": "Mark SWAP 0.0003716: P&L +24.9%, exit rule hold",
+      "usd": 8.95
+    },
+    {
+      "at": "2026-10-06T02:08:46.071Z",
+      "seat": "CHIEF",
+      "kind": "PASS",
+      "text": "Pick declined: best puter confidence 0.02 < 0.55 (worth 0.45 passed PAPER_WORTH_MIN 0.45).",
+      "usd": null
+    },
+    {
+      "at": "2026-10-06T02:08:46.071Z",
+      "seat": "VET",
+      "kind": "RESEARCH",
+      "text": "USEFUL passed all gates",
+      "usd": null
+    },
+    {
+      "at": "2026-10-06T02:08:46.071Z",
+      "seat": "VET",
+      "kind": "RESEARCH",
+      "text": "puter passed all gates",
+      "usd": null
+    },
+    {
+      "at": "2026-10-06T02:08:46.069Z",
+      "seat": "SCAN",
+      "kind": "KILL",
+      "text": "Free cut 11: liquidity 8, mcap 3",
+      "usd": null
+    },
     {
       "at": "2026-10-06T02:03:46.849Z",
       "seat": "RISK",
@@ -576,41 +615,6 @@
       "seat": "VET",
       "kind": "KILL",
       "text": "blast killed: momentum_already_spent",
-      "usd": null
-    },
-    {
-      "at": "2026-10-06T01:12:15.267Z",
-      "seat": "VET",
-      "kind": "RESEARCH",
-      "text": "USEFUL passed all gates",
-      "usd": null
-    },
-    {
-      "at": "2026-10-06T01:12:15.267Z",
-      "seat": "VET",
-      "kind": "RESEARCH",
-      "text": "phubber passed all gates",
-      "usd": null
-    },
-    {
-      "at": "2026-10-06T01:12:15.267Z",
-      "seat": "VET",
-      "kind": "KILL",
-      "text": "SOLgiving killed: momentum_already_spent, shape",
-      "usd": null
-    },
-    {
-      "at": "2026-10-06T01:12:15.267Z",
-      "seat": "VET",
-      "kind": "RESEARCH",
-      "text": "MAYA passed all gates",
-      "usd": null
-    },
-    {
-      "at": "2026-10-06T01:12:15.265Z",
-      "seat": "SCAN",
-      "kind": "KILL",
-      "text": "Free cut 25: liquidity 19, mcap 4, age 2",
       "usd": null
     }
   ]
