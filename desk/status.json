@@ -1,11 +1,11 @@
 {
-  "updated_at": "2026-10-06T01:48:46.503Z",
+  "updated_at": "2026-10-06T01:53:50.310Z",
   "mode": "shadow",
   "seats": [
     {
       "name": "SCAN",
       "status": "ok",
-      "note": "65 names, 43 FOMO rows"
+      "note": "65 names, 45 FOMO rows"
     },
     {
       "name": "VET",
@@ -20,7 +20,7 @@
     {
       "name": "CHIEF",
       "status": "ok",
-      "note": "Single survivor USEFUL declined: worth_trading_at_all 0.36 < 0.45"
+      "note": "Single survivor USEFUL declined: worth_trading_at_all 0.33 < 0.45"
     },
     {
       "name": "SIZE",
@@ -35,20 +35,20 @@
     {
       "name": "RISK",
       "status": "ok",
-      "note": "1 open (0 past take-profit, trailing); SL/TP/trail armed; unrealized $+7.58"
+      "note": "1 open (0 past take-profit, trailing); SL/TP/trail armed; unrealized $+7.87"
     },
     {
       "name": "COORDINATOR",
       "status": "ok",
-      "note": "Cycles running; last at 20:48 CT"
+      "note": "Cycles running; last at 20:53 CT"
     }
   ],
   "last_cycle": {
-    "at": "2026-10-06T01:48:46.138Z",
+    "at": "2026-10-06T01:53:49.943Z",
     "outcome": "no_trade",
     "universe": 65,
     "survivors": 1,
-    "reason": "Single survivor USEFUL declined: worth_trading_at_all 0.36 < 0.45 (PAPER_WORTH_MIN)."
+    "reason": "Single survivor USEFUL declined: worth_trading_at_all 0.33 < 0.45 (PAPER_WORTH_MIN)."
   },
   "positions": [
     {
@@ -56,10 +56,10 @@
       "chain": "solana",
       "address": "GYFLuEAZMDdpUsTmyGdHstuXQC3JB9ZqtZbfktpppump",
       "entry_price": 0.00028340113,
-      "current_price": 0.0003605,
+      "current_price": 0.0003628,
       "ticket_usd": 36.0,
-      "pnl_pct": 21.06,
-      "pnl_usd_after_fees": 7.58,
+      "pnl_pct": 21.85,
+      "pnl_usd_after_fees": 7.87,
       "opened_at": "2026-10-04T21:32:00.000Z",
       "status": "open",
       "realized_usd": 0.0,
@@ -68,9 +68,9 @@
     }
   ],
   "totals": {
-    "paper_bank_usd": 1007.58,
+    "paper_bank_usd": 1007.87,
     "realized_usd": 0.0,
-    "unrealized_usd": 7.58,
+    "unrealized_usd": 7.87,
     "trades": 1,
     "win_rate": null
   },
@@ -248,9 +248,41 @@
     {
       "at": "2026-10-06T01:48:46.372Z",
       "bank_usd": 1007.58
+    },
+    {
+      "at": "2026-10-06T01:53:50.189Z",
+      "bank_usd": 1007.87
     }
   ],
   "activity": [
+    {
+      "at": "2026-10-06T01:53:50.189Z",
+      "seat": "RISK",
+      "kind": "RESEARCH",
+      "text": "Mark SWAP 0.0003628: P&L +21.8%, exit rule hold",
+      "usd": 7.87
+    },
+    {
+      "at": "2026-10-06T01:53:49.943Z",
+      "seat": "CHIEF",
+      "kind": "PASS",
+      "text": "Single survivor USEFUL declined: worth_trading_at_all 0.33 < 0.45 (PAPER_WORTH_MIN).",
+      "usd": null
+    },
+    {
+      "at": "2026-10-06T01:53:49.942Z",
+      "seat": "VET",
+      "kind": "RESEARCH",
+      "text": "USEFUL passed all gates",
+      "usd": null
+    },
+    {
+      "at": "2026-10-06T01:53:49.941Z",
+      "seat": "SCAN",
+      "kind": "KILL",
+      "text": "Free cut 4: liquidity 2, age 2",
+      "usd": null
+    },
     {
       "at": "2026-10-06T01:48:46.372Z",
       "seat": "RISK",
@@ -572,34 +604,6 @@
       "kind": "RESEARCH",
       "text": "Mark SWAP 0.0003898: P&L +31.1%, exit rule hold",
       "usd": 11.2
-    },
-    {
-      "at": "2026-10-06T00:57:07.297Z",
-      "seat": "CHIEF",
-      "kind": "PASS",
-      "text": "Single survivor declined: worth_trading_at_all below the floor then in force (0.60).",
-      "usd": null
-    },
-    {
-      "at": "2026-10-06T00:57:07.296Z",
-      "seat": "VET",
-      "kind": "RESEARCH",
-      "text": "USEFUL passed all gates",
-      "usd": null
-    },
-    {
-      "at": "2026-10-06T00:57:07.295Z",
-      "seat": "SCAN",
-      "kind": "KILL",
-      "text": "Free cut 1: age 1",
-      "usd": null
-    },
-    {
-      "at": "2026-10-06T00:52:07.587Z",
-      "seat": "RISK",
-      "kind": "RESEARCH",
-      "text": "Mark SWAP 0.0003907: P&L +31.4%, exit rule hold",
-      "usd": 11.31
     }
   ]
 }
