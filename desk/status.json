@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-06T02:08:46.434Z",
+  "updated_at": "2026-10-06T02:13:50.335Z",
   "mode": "shadow",
   "seats": [
     {
@@ -10,7 +10,7 @@
     {
       "name": "VET",
       "status": "warn",
-      "note": "2/2 judged with top-wallet/top-10 unknown (RPC/GT rate-limited); size capped 0.3"
+      "note": "5/5 judged with top-wallet/top-10 unknown (RPC/GT rate-limited); size capped 0.3"
     },
     {
       "name": "SOCIAL",
@@ -19,8 +19,8 @@
     },
     {
       "name": "CHIEF",
-      "status": "ok",
-      "note": "Pick declined: best puter confidence 0.02 < 0.55"
+      "status": "idle",
+      "note": "No pick to make this cycle"
     },
     {
       "name": "SIZE",
@@ -35,20 +35,20 @@
     {
       "name": "RISK",
       "status": "ok",
-      "note": "1 open (0 past take-profit, trailing); SL/TP/trail armed; unrealized $+8.95"
+      "note": "1 open (0 past take-profit, trailing); SL/TP/trail armed; unrealized $+9.15"
     },
     {
       "name": "COORDINATOR",
       "status": "ok",
-      "note": "Cycles running; last at 21:08 CT"
+      "note": "Cycles running; last at 21:13 CT"
     }
   ],
   "last_cycle": {
-    "at": "2026-10-06T02:08:46.071Z",
+    "at": "2026-10-06T02:13:49.930Z",
     "outcome": "no_trade",
     "universe": 64,
-    "survivors": 2,
-    "reason": "Pick declined: best puter confidence 0.02 < 0.55 (worth 0.45 passed PAPER_WORTH_MIN 0.45)."
+    "survivors": 0,
+    "reason": "No survivors: 5 judged, failed on momentum_already_spent."
   },
   "positions": [
     {
@@ -56,10 +56,10 @@
       "chain": "solana",
       "address": "GYFLuEAZMDdpUsTmyGdHstuXQC3JB9ZqtZbfktpppump",
       "entry_price": 0.00028340113,
-      "current_price": 0.0003716,
+      "current_price": 0.0003732,
       "ticket_usd": 36.0,
-      "pnl_pct": 24.87,
-      "pnl_usd_after_fees": 8.95,
+      "pnl_pct": 25.42,
+      "pnl_usd_after_fees": 9.15,
       "opened_at": "2026-10-04T21:32:00.000Z",
       "status": "open",
       "realized_usd": 0.0,
@@ -68,9 +68,9 @@
     }
   ],
   "totals": {
-    "paper_bank_usd": 1008.95,
+    "paper_bank_usd": 1009.15,
     "realized_usd": 0.0,
-    "unrealized_usd": 8.95,
+    "unrealized_usd": 9.15,
     "trades": 1,
     "win_rate": null
   },
@@ -264,9 +264,62 @@
     {
       "at": "2026-10-06T02:08:46.318Z",
       "bank_usd": 1008.95
+    },
+    {
+      "at": "2026-10-06T02:13:50.217Z",
+      "bank_usd": 1009.15
     }
   ],
   "activity": [
+    {
+      "at": "2026-10-06T02:13:50.217Z",
+      "seat": "RISK",
+      "kind": "RESEARCH",
+      "text": "Mark SWAP 0.0003732: P&L +25.4%, exit rule hold",
+      "usd": 9.15
+    },
+    {
+      "at": "2026-10-06T02:13:49.930Z",
+      "seat": "VET",
+      "kind": "KILL",
+      "text": "sizeinu killed: momentum_already_spent, shape",
+      "usd": null
+    },
+    {
+      "at": "2026-10-06T02:13:49.930Z",
+      "seat": "VET",
+      "kind": "KILL",
+      "text": "USEFUL killed: momentum_already_spent",
+      "usd": null
+    },
+    {
+      "at": "2026-10-06T02:13:49.930Z",
+      "seat": "VET",
+      "kind": "KILL",
+      "text": "MAYA killed: momentum_already_spent",
+      "usd": null
+    },
+    {
+      "at": "2026-10-06T02:13:49.930Z",
+      "seat": "VET",
+      "kind": "KILL",
+      "text": "puter killed: momentum_already_spent",
+      "usd": null
+    },
+    {
+      "at": "2026-10-06T02:13:49.930Z",
+      "seat": "VET",
+      "kind": "KILL",
+      "text": "MINTRO killed: momentum_already_spent",
+      "usd": null
+    },
+    {
+      "at": "2026-10-06T02:13:49.928Z",
+      "seat": "SCAN",
+      "kind": "KILL",
+      "text": "Free cut 1: age 1",
+      "usd": null
+    },
     {
       "at": "2026-10-06T02:08:46.318Z",
       "seat": "RISK",
@@ -566,55 +619,6 @@
       "seat": "VET",
       "kind": "RESEARCH",
       "text": "USEFUL passed all gates",
-      "usd": null
-    },
-    {
-      "at": "2026-10-06T01:33:55.187Z",
-      "seat": "VET",
-      "kind": "RESEARCH",
-      "text": "MAYA passed all gates",
-      "usd": null
-    },
-    {
-      "at": "2026-10-06T01:33:55.187Z",
-      "seat": "VET",
-      "kind": "RESEARCH",
-      "text": "MINTRO passed all gates",
-      "usd": null
-    },
-    {
-      "at": "2026-10-06T01:33:55.185Z",
-      "seat": "SCAN",
-      "kind": "KILL",
-      "text": "Free cut 18: liquidity 17, age 1",
-      "usd": null
-    },
-    {
-      "at": "2026-10-06T01:12:15.495Z",
-      "seat": "RISK",
-      "kind": "RESEARCH",
-      "text": "Mark SWAP 0.0003273: P&L +9.7%, exit rule hold",
-      "usd": 3.48
-    },
-    {
-      "at": "2026-10-06T01:12:15.267Z",
-      "seat": "CHIEF",
-      "kind": "PASS",
-      "text": "Pick declined: worth_trading_at_all 0.49 < 0.60 (best phubber at 0.49).",
-      "usd": null
-    },
-    {
-      "at": "2026-10-06T01:12:15.267Z",
-      "seat": "VET",
-      "kind": "KILL",
-      "text": "sizeinu killed: momentum_already_spent",
-      "usd": null
-    },
-    {
-      "at": "2026-10-06T01:12:15.267Z",
-      "seat": "VET",
-      "kind": "KILL",
-      "text": "blast killed: momentum_already_spent",
       "usd": null
     }
   ]
