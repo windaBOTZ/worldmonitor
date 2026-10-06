@@ -1,16 +1,16 @@
 {
-  "updated_at": "2026-10-06T05:49:01.033Z",
+  "updated_at": "2026-10-06T05:54:15.907Z",
   "mode": "shadow",
   "seats": [
     {
       "name": "SCAN",
       "status": "ok",
-      "note": "64 names, 38 FOMO rows"
+      "note": "65 names, 39 FOMO rows"
     },
     {
       "name": "VET",
       "status": "warn",
-      "note": "1/1 judged with top-wallet/top-10 unknown (RPC/GT rate-limited); size capped 0.3"
+      "note": "2/2 judged with top-wallet/top-10 unknown (RPC/GT rate-limited); size capped 0.3"
     },
     {
       "name": "SOCIAL",
@@ -20,7 +20,7 @@
     {
       "name": "CHIEF",
       "status": "ok",
-      "note": "Single survivor CAESAR declined: worth_trading_at_all 0.30 < 0.45"
+      "note": "Pick declined: worth_trading_at_all 0.38 < 0.45"
     },
     {
       "name": "SIZE",
@@ -40,15 +40,15 @@
     {
       "name": "COORDINATOR",
       "status": "ok",
-      "note": "Cycles running; last at 00:49 CT"
+      "note": "Cycles running; last at 00:54 CT"
     }
   ],
   "last_cycle": {
-    "at": "2026-10-06T05:49:00.888Z",
+    "at": "2026-10-06T05:54:15.764Z",
     "outcome": "no_trade",
-    "universe": 64,
-    "survivors": 1,
-    "reason": "Single survivor CAESAR declined: worth_trading_at_all 0.30 < 0.45 (PAPER_WORTH_MIN)."
+    "universe": 65,
+    "survivors": 2,
+    "reason": "Pick declined: worth_trading_at_all 0.38 < 0.45 (PAPER_WORTH_MIN) (best VACAT at 0.07)."
   },
   "positions": [
     {
@@ -280,6 +280,34 @@
     }
   ],
   "activity": [
+    {
+      "at": "2026-10-06T05:54:15.764Z",
+      "seat": "CHIEF",
+      "kind": "PASS",
+      "text": "Pick declined: worth_trading_at_all 0.38 < 0.45 (PAPER_WORTH_MIN) (best VACAT at 0.07).",
+      "usd": null
+    },
+    {
+      "at": "2026-10-06T05:54:15.763Z",
+      "seat": "VET",
+      "kind": "RESEARCH",
+      "text": "CAESAR passed all gates",
+      "usd": null
+    },
+    {
+      "at": "2026-10-06T05:54:15.763Z",
+      "seat": "VET",
+      "kind": "RESEARCH",
+      "text": "VACAT passed all gates",
+      "usd": null
+    },
+    {
+      "at": "2026-10-06T05:54:15.762Z",
+      "seat": "SCAN",
+      "kind": "KILL",
+      "text": "Free cut 3: liquidity 3",
+      "usd": null
+    },
     {
       "at": "2026-10-06T05:49:00.888Z",
       "seat": "CHIEF",
@@ -600,34 +628,6 @@
       "seat": "CHIEF",
       "kind": "PASS",
       "text": "Single survivor USEFUL declined: worth_trading_at_all 0.36 < 0.45 (PAPER_WORTH_MIN).",
-      "usd": null
-    },
-    {
-      "at": "2026-10-06T01:48:46.137Z",
-      "seat": "VET",
-      "kind": "RESEARCH",
-      "text": "USEFUL passed all gates",
-      "usd": null
-    },
-    {
-      "at": "2026-10-06T01:43:52.275Z",
-      "seat": "RISK",
-      "kind": "RESEARCH",
-      "text": "Mark SWAP 0.0003539: P&L +18.8%, exit rule hold",
-      "usd": 6.77
-    },
-    {
-      "at": "2026-10-06T01:43:52.056Z",
-      "seat": "CHIEF",
-      "kind": "PASS",
-      "text": "Single survivor USEFUL declined: worth_trading_at_all 0.35 < 0.45 (PAPER_WORTH_MIN).",
-      "usd": null
-    },
-    {
-      "at": "2026-10-06T01:43:52.056Z",
-      "seat": "VET",
-      "kind": "KILL",
-      "text": "sizeinu killed: shape",
       "usd": null
     }
   ]
