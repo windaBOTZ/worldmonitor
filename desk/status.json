@@ -1,16 +1,16 @@
 {
-  "updated_at": "2026-10-06T01:12:15.621Z",
+  "updated_at": "2026-10-06T01:33:55.578Z",
   "mode": "shadow",
   "seats": [
     {
       "name": "SCAN",
       "status": "ok",
-      "note": "63 names, 41 FOMO rows"
+      "note": "66 names, 43 FOMO rows"
     },
     {
       "name": "VET",
       "status": "warn",
-      "note": "6/6 judged with top-wallet/top-10 unknown (RPC/GT rate-limited); size capped 0.3"
+      "note": "5/5 judged with top-wallet/top-10 unknown (RPC/GT rate-limited); size capped 0.3"
     },
     {
       "name": "SOCIAL",
@@ -20,7 +20,7 @@
     {
       "name": "CHIEF",
       "status": "ok",
-      "note": "Pick declined: worth_trading_at_all 0.49 < 0.60"
+      "note": "Pick declined: worth_trading_at_all 0.38 < 0.45"
     },
     {
       "name": "SIZE",
@@ -35,20 +35,20 @@
     {
       "name": "RISK",
       "status": "ok",
-      "note": "1 open (0 past take-profit, trailing); SL/TP/trail armed; unrealized $+3.48"
+      "note": "1 open (0 past take-profit, trailing); SL/TP/trail armed; unrealized $+7.45"
     },
     {
       "name": "COORDINATOR",
       "status": "ok",
-      "note": "Cycles running; last at 20:12 CT"
+      "note": "Cycles running; last at 20:33 CT"
     }
   ],
   "last_cycle": {
-    "at": "2026-10-06T01:12:15.267Z",
+    "at": "2026-10-06T01:33:55.187Z",
     "outcome": "no_trade",
-    "universe": 63,
-    "survivors": 3,
-    "reason": "Pick declined: worth_trading_at_all 0.49 < 0.60 (best phubber at 0.49)."
+    "universe": 66,
+    "survivors": 4,
+    "reason": "Pick declined: worth_trading_at_all 0.38 < 0.45 (PAPER_WORTH_MIN) (best MAYA at 0.21)."
   },
   "positions": [
     {
@@ -56,10 +56,10 @@
       "chain": "solana",
       "address": "GYFLuEAZMDdpUsTmyGdHstuXQC3JB9ZqtZbfktpppump",
       "entry_price": 0.00028340113,
-      "current_price": 0.0003273,
+      "current_price": 0.0003594,
       "ticket_usd": 36.0,
-      "pnl_pct": 9.66,
-      "pnl_usd_after_fees": 3.48,
+      "pnl_pct": 20.68,
+      "pnl_usd_after_fees": 7.45,
       "opened_at": "2026-10-04T21:32:00.000Z",
       "status": "open",
       "realized_usd": 0.0,
@@ -68,9 +68,9 @@
     }
   ],
   "totals": {
-    "paper_bank_usd": 1003.48,
+    "paper_bank_usd": 1007.45,
     "realized_usd": 0.0,
-    "unrealized_usd": 3.48,
+    "unrealized_usd": 7.45,
     "trades": 1,
     "win_rate": null
   },
@@ -232,9 +232,69 @@
     {
       "at": "2026-10-06T01:12:15.495Z",
       "bank_usd": 1003.48
+    },
+    {
+      "at": "2026-10-06T01:33:55.436Z",
+      "bank_usd": 1007.45
     }
   ],
   "activity": [
+    {
+      "at": "2026-10-06T01:33:55.436Z",
+      "seat": "RISK",
+      "kind": "RESEARCH",
+      "text": "Mark SWAP 0.0003594: P&L +20.7%, exit rule hold",
+      "usd": 7.45
+    },
+    {
+      "at": "2026-10-06T01:33:55.187Z",
+      "seat": "CHIEF",
+      "kind": "PASS",
+      "text": "Pick declined: worth_trading_at_all 0.38 < 0.45 (PAPER_WORTH_MIN) (best MAYA at 0.21).",
+      "usd": null
+    },
+    {
+      "at": "2026-10-06T01:33:55.187Z",
+      "seat": "VET",
+      "kind": "RESEARCH",
+      "text": "phubber passed all gates",
+      "usd": null
+    },
+    {
+      "at": "2026-10-06T01:33:55.187Z",
+      "seat": "VET",
+      "kind": "KILL",
+      "text": "Memeployed killed: momentum_already_spent",
+      "usd": null
+    },
+    {
+      "at": "2026-10-06T01:33:55.187Z",
+      "seat": "VET",
+      "kind": "RESEARCH",
+      "text": "USEFUL passed all gates",
+      "usd": null
+    },
+    {
+      "at": "2026-10-06T01:33:55.187Z",
+      "seat": "VET",
+      "kind": "RESEARCH",
+      "text": "MAYA passed all gates",
+      "usd": null
+    },
+    {
+      "at": "2026-10-06T01:33:55.187Z",
+      "seat": "VET",
+      "kind": "RESEARCH",
+      "text": "MINTRO passed all gates",
+      "usd": null
+    },
+    {
+      "at": "2026-10-06T01:33:55.185Z",
+      "seat": "SCAN",
+      "kind": "KILL",
+      "text": "Free cut 18: liquidity 17, age 1",
+      "usd": null
+    },
     {
       "at": "2026-10-06T01:12:15.495Z",
       "seat": "RISK",
@@ -309,7 +369,7 @@
       "at": "2026-10-06T01:07:07.077Z",
       "seat": "CHIEF",
       "kind": "PASS",
-      "text": "Single survivor declined: worth_trading_at_all below 0.60.",
+      "text": "Single survivor declined: worth_trading_at_all below the floor then in force (0.60).",
       "usd": null
     },
     {
@@ -337,7 +397,7 @@
       "at": "2026-10-06T01:02:07.057Z",
       "seat": "CHIEF",
       "kind": "PASS",
-      "text": "Single survivor declined: worth_trading_at_all below 0.60.",
+      "text": "Single survivor declined: worth_trading_at_all below the floor then in force (0.60).",
       "usd": null
     },
     {
@@ -365,7 +425,7 @@
       "at": "2026-10-06T00:57:07.297Z",
       "seat": "CHIEF",
       "kind": "PASS",
-      "text": "Single survivor declined: worth_trading_at_all below 0.60.",
+      "text": "Single survivor declined: worth_trading_at_all below the floor then in force (0.60).",
       "usd": null
     },
     {
@@ -393,7 +453,7 @@
       "at": "2026-10-06T00:52:07.334Z",
       "seat": "CHIEF",
       "kind": "PASS",
-      "text": "Single survivor declined: worth_trading_at_all below 0.60.",
+      "text": "Single survivor declined: worth_trading_at_all below the floor then in force (0.60).",
       "usd": null
     },
     {
@@ -421,7 +481,7 @@
       "at": "2026-10-06T00:47:10.567Z",
       "seat": "CHIEF",
       "kind": "PASS",
-      "text": "Single survivor declined: worth_trading_at_all below 0.60.",
+      "text": "Single survivor declined: worth_trading_at_all below the floor then in force (0.60).",
       "usd": null
     },
     {
@@ -527,62 +587,6 @@
       "seat": "VET",
       "kind": "RESEARCH",
       "text": "USEFUL passed all gates",
-      "usd": null
-    },
-    {
-      "at": "2026-10-06T00:09:34.860Z",
-      "seat": "VET",
-      "kind": "RESEARCH",
-      "text": "SOUVENIR passed all gates",
-      "usd": null
-    },
-    {
-      "at": "2026-10-06T00:09:34.860Z",
-      "seat": "VET",
-      "kind": "RESEARCH",
-      "text": "MINTRO passed all gates",
-      "usd": null
-    },
-    {
-      "at": "2026-10-06T00:09:34.859Z",
-      "seat": "SCAN",
-      "kind": "KILL",
-      "text": "Free cut 2: age 1, liquidity 1",
-      "usd": null
-    },
-    {
-      "at": "2026-10-06T00:04:34.056Z",
-      "seat": "RISK",
-      "kind": "RESEARCH",
-      "text": "Mark SWAP 0.0003418: P&L +14.6%, exit rule hold",
-      "usd": 5.27
-    },
-    {
-      "at": "2026-10-06T00:04:33.829Z",
-      "seat": "CHIEF",
-      "kind": "PASS",
-      "text": "Pick declined: worth_trading_at_all 0.45 < 0.60 (best SOUVENIR at 0.34).",
-      "usd": null
-    },
-    {
-      "at": "2026-10-06T00:04:33.829Z",
-      "seat": "VET",
-      "kind": "KILL",
-      "text": "sizeinu killed: momentum_already_spent",
-      "usd": null
-    },
-    {
-      "at": "2026-10-06T00:04:33.829Z",
-      "seat": "VET",
-      "kind": "RESEARCH",
-      "text": "USEFUL passed all gates",
-      "usd": null
-    },
-    {
-      "at": "2026-10-06T00:04:33.829Z",
-      "seat": "VET",
-      "kind": "RESEARCH",
-      "text": "SOUVENIR passed all gates",
       "usd": null
     }
   ]
