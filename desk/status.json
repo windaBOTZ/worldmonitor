@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-06T06:09:05.009Z",
+  "updated_at": "2026-10-06T06:14:02.389Z",
   "mode": "shadow",
   "seats": [
     {
@@ -10,7 +10,7 @@
     {
       "name": "VET",
       "status": "warn",
-      "note": "3/3 judged with top-wallet/top-10 unknown (RPC/GT rate-limited); size capped 0.3"
+      "note": "1/1 judged with top-wallet/top-10 unknown (RPC/GT rate-limited); size capped 0.3"
     },
     {
       "name": "SOCIAL",
@@ -19,8 +19,8 @@
     },
     {
       "name": "CHIEF",
-      "status": "ok",
-      "note": "Single survivor CAESAR declined: worth_trading_at_all 0.28 < 0.45"
+      "status": "idle",
+      "note": "No pick to make this cycle"
     },
     {
       "name": "SIZE",
@@ -40,15 +40,15 @@
     {
       "name": "COORDINATOR",
       "status": "ok",
-      "note": "Cycles running; last at 01:09 CT"
+      "note": "Cycles running; last at 01:14 CT"
     }
   ],
   "last_cycle": {
-    "at": "2026-10-06T06:09:04.872Z",
+    "at": "2026-10-06T06:14:02.234Z",
     "outcome": "no_trade",
     "universe": 61,
-    "survivors": 1,
-    "reason": "Single survivor CAESAR declined: worth_trading_at_all 0.28 < 0.45 (PAPER_WORTH_MIN)."
+    "survivors": 0,
+    "reason": "No survivors: 1 judged, failed on momentum_already_spent."
   },
   "positions": [
     {
@@ -280,6 +280,20 @@
     }
   ],
   "activity": [
+    {
+      "at": "2026-10-06T06:14:02.234Z",
+      "seat": "VET",
+      "kind": "KILL",
+      "text": "CAESAR killed: momentum_already_spent",
+      "usd": null
+    },
+    {
+      "at": "2026-10-06T06:14:02.232Z",
+      "seat": "SCAN",
+      "kind": "KILL",
+      "text": "Free cut 4: age 2, mcap 1, liquidity 1",
+      "usd": null
+    },
     {
       "at": "2026-10-06T06:09:04.872Z",
       "seat": "CHIEF",
@@ -615,20 +629,6 @@
       "kind": "RESEARCH",
       "text": "Mark SWAP 0.0003728: P&L +25.3%, exit rule hold",
       "usd": 9.1
-    },
-    {
-      "at": "2026-10-06T02:03:46.609Z",
-      "seat": "CHIEF",
-      "kind": "PASS",
-      "text": "Single survivor USEFUL declined: worth_trading_at_all 0.36 < 0.45 (PAPER_WORTH_MIN).",
-      "usd": null
-    },
-    {
-      "at": "2026-10-06T02:03:46.608Z",
-      "seat": "VET",
-      "kind": "RESEARCH",
-      "text": "USEFUL passed all gates",
-      "usd": null
     }
   ]
 }
