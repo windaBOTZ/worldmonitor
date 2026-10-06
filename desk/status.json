@@ -1,16 +1,16 @@
 {
-  "updated_at": "2026-10-06T05:39:04.961Z",
+  "updated_at": "2026-10-06T05:44:03.543Z",
   "mode": "shadow",
   "seats": [
     {
       "name": "SCAN",
       "status": "ok",
-      "note": "64 names, 38 FOMO rows"
+      "note": "64 names, 36 FOMO rows"
     },
     {
       "name": "VET",
       "status": "warn",
-      "note": "3/3 judged with top-wallet/top-10 unknown (RPC/GT rate-limited); size capped 0.3"
+      "note": "1/1 judged with top-wallet/top-10 unknown (RPC/GT rate-limited); size capped 0.3"
     },
     {
       "name": "SOCIAL",
@@ -20,7 +20,7 @@
     {
       "name": "CHIEF",
       "status": "ok",
-      "note": "Single survivor CAESAR declined: worth_trading_at_all 0.28 < 0.45"
+      "note": "Single survivor CAESAR declined: worth_trading_at_all 0.32 < 0.45"
     },
     {
       "name": "SIZE",
@@ -40,15 +40,15 @@
     {
       "name": "COORDINATOR",
       "status": "ok",
-      "note": "Cycles running; last at 00:39 CT"
+      "note": "Cycles running; last at 00:44 CT"
     }
   ],
   "last_cycle": {
-    "at": "2026-10-06T05:39:04.821Z",
+    "at": "2026-10-06T05:44:03.401Z",
     "outcome": "no_trade",
     "universe": 64,
     "survivors": 1,
-    "reason": "Single survivor CAESAR declined: worth_trading_at_all 0.28 < 0.45 (PAPER_WORTH_MIN)."
+    "reason": "Single survivor CAESAR declined: worth_trading_at_all 0.32 < 0.45 (PAPER_WORTH_MIN)."
   },
   "positions": [
     {
@@ -280,6 +280,27 @@
     }
   ],
   "activity": [
+    {
+      "at": "2026-10-06T05:44:03.401Z",
+      "seat": "CHIEF",
+      "kind": "PASS",
+      "text": "Single survivor CAESAR declined: worth_trading_at_all 0.32 < 0.45 (PAPER_WORTH_MIN).",
+      "usd": null
+    },
+    {
+      "at": "2026-10-06T05:44:03.400Z",
+      "seat": "VET",
+      "kind": "RESEARCH",
+      "text": "CAESAR passed all gates",
+      "usd": null
+    },
+    {
+      "at": "2026-10-06T05:44:03.399Z",
+      "seat": "SCAN",
+      "kind": "KILL",
+      "text": "Free cut 2: age 1, mcap 1",
+      "usd": null
+    },
     {
       "at": "2026-10-06T05:39:04.821Z",
       "seat": "CHIEF",
@@ -607,27 +628,6 @@
       "seat": "VET",
       "kind": "RESEARCH",
       "text": "USEFUL passed all gates",
-      "usd": null
-    },
-    {
-      "at": "2026-10-06T01:43:52.056Z",
-      "seat": "VET",
-      "kind": "KILL",
-      "text": "MAYA killed: momentum_already_spent",
-      "usd": null
-    },
-    {
-      "at": "2026-10-06T01:43:52.056Z",
-      "seat": "VET",
-      "kind": "KILL",
-      "text": "MINTRO killed: momentum_already_spent",
-      "usd": null
-    },
-    {
-      "at": "2026-10-06T01:43:52.054Z",
-      "seat": "SCAN",
-      "kind": "KILL",
-      "text": "Free cut 1: age 1",
       "usd": null
     }
   ]
